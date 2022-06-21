@@ -1,12 +1,38 @@
+/*----------------------------root-----------------------------------*/
+
+:root {
+    --corpo: #1D232A;
+
+    --cabeçalho: #1D232A;
+    
+    --cabeçalho-mobile: #15191C;
+    
+    --menu-lateral: #15191C;
+    
+    --cartao: #2C343A;
+    
+    --fonte: #FFFFFF;
+    
+    --fonte-alternativa: #95999C;
+    
+    --links: #0480DC;
+    
+    --botão: #0480DC;
+    
+    --sombras: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+/*--------------------------- body ---------------------------------*/
+
 @font-face {
     font-family: 'icones';
     src: url(../font/icones.ttf);
 }
 
 body {
-    background-color: #1D232A;
+    background-color: var(--cabeçalho-mobile);
     font-family: 'Open Sans', 'icones',  sans-serif;
-    color: #FFF;
+    color: var(--fonte);
 }
 
 @media screen and (min-width: 1440px) {
@@ -16,16 +42,16 @@ body {
     }
 }
 
+/*---------------------------cabecalho------------------------------*/
+
 .cabecalho {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #15191C;
+    background-color: var(--cabeçalho-mobile);
     padding: 8px 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
-
-
 
 .cabecalho__menu i::before {
     content: "\e904";
@@ -42,7 +68,7 @@ body {
 
 @media screen and (min-width: 1440px) {
     .cabecalho {
-        background-color: #1D232A;
+        background-color: var(--cabeçalho);
         display: grid;
         column-gap: 32px;
         grid-template-columns: 1fr auto;
@@ -66,9 +92,9 @@ body {
         column-gap: 8px;
         align-items: center;
         justify-self: flex-end;
-        color: #95999C;
+        color: var(--fonte-alternativa);
         padding: 8px 32px;
-        border-right: 1px solid #95999C;
+        border-right: 1px solid var(--fonte-alternativa);
     }
 
     .cabecalho__perfil::before {
@@ -84,7 +110,7 @@ body {
 
     .cabecalho__perfil::after {
         content: "\e90d";
-        color: #FFF;
+        color: var(--fonte);
         font-size: 1.5rem;
     }
 }
@@ -94,6 +120,8 @@ body {
     font-size: 24px;
 }
 
+/*-----------------------------menu-lateral----------------------------*/
+
 .menu-lateral {
     position: absolute;
     left: -100vw;
@@ -101,7 +129,7 @@ body {
     flex-direction: column;
     width: 75vw;
     height: 100vh;
-    background-color: #15191C;
+    background-color: var(--menu-lateral);
     transition: left .25s;
     z-index: 99;
 }
@@ -119,16 +147,16 @@ body {
 
 .menu-lateral__link {
     height: 64px;
-    color: #95999C;
+    color: var(--fonte-alternativa);
     padding-left: 64px;
     display: flex;
     align-items: center;
 }
 
 .menu-lateral__link--ativo{
-    color: #FFF;
+    color: var(--fonte);
     padding-left: 56px;
-    border-left: 8px solid #FFF;
+    border-left: 8px solid var(--fonte);
 }
 
 .menu-lateral__link::before {
@@ -173,6 +201,8 @@ body {
     }
 }
 
+/*-------------------------------principal------------------------------*/
+
 .principal {
     padding: 24px 16px;
     display: grid;
@@ -208,11 +238,13 @@ body {
     }
 }
 
+/*-----------------------------------cartao----------------------------------*/
+
 .cartao {
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #2C343A;
+    background-color: var(--cartao);
 }
 
 .cartao__imagem--desktop {
@@ -249,7 +281,7 @@ body {
 .cartao__info {
     display: flex;
     align-items: center;
-    color: #95999C;
+    color: var(--fonte-alternativa);
 }
 
 .cartao__info--tempo::before {
@@ -262,11 +294,19 @@ body {
     margin-right: 8px;
 }
 
+.cartao__info--dinheiro::before {
+    content: "\e905";
+}
+
+.cartao__botao--carrinho::before{
+    content: "\e901";
+}
+
 .cartao__botao{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0480DC;
+    background-color: var(--botão);
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -327,7 +367,7 @@ body {
     .cartao__link {
         font-size: .8rem;
         font-weight: 600;
-        color: #0480DC;
+        color: var(--links);
         justify-self: flex-end;
     }
 
@@ -356,9 +396,11 @@ body {
 
     .cartao__item-perfil {
         font-size: .8rem;
-        color: #95999C;
+        color: var(--fonte-alternativa);
     }
 }
+
+/*-------------------------------------secao---------------------------------------*/
 
 .secao {
     display: grid;
@@ -397,4 +439,3 @@ body {
         grid-area: secao-produtos;
     }
 }
-

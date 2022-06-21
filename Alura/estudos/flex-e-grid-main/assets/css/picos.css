@@ -1,0 +1,55 @@
+
+.mapa__picos {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--cartao);
+}
+
+.mapa__picos--desktop {
+    display: none;
+}
+
+.destaque-videos {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .principal {
+        display: grid;
+        grid-template-areas: 
+        "titulo-pagina titulo-pagina titulo-pagina"
+        "mapa__picos mapa__picos videos-recentes"
+        "mapa__picos mapa__picos videos-recentes"
+        "cartao-pistas cartao-pistas cartao-pistas cartao-pistas"
+        ;
+    }
+    .mapa__picos--mobile {
+        display: none;
+    }
+
+    .titulo-pagina {
+        grid-area: titulo-pagina;
+    }
+
+    .destaque-videos {
+        display: block;
+    }
+
+    .cartao-pistas {
+        grid-area:  cartao-pistas;
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: var(--cartao);
+    }
+    
+    .cartao__imagem--img-gg{
+        height: 154px;
+    }
+
+    .mapa__picos--mobile {
+        display: none;
+    }
+}
+
