@@ -8,12 +8,17 @@
 :root {
     /*--cores--*/
     --cor-de-fundo: #EBECEE;
+    --preto: #000000;
+    --cinza: #474646;
+    --cinza-claro: #858585;
     --branco: #FFFFFF;
     --laranja: #EB9B00;
     --azul: #002F52;
     --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+
     /*--fonts--*/
-    --fonte-principal: 'Poppins'
+    --fonte-principal: 'Poppins';
+    --fonte-secundaria: 'Josefin Sans';
 }
 
 body {
