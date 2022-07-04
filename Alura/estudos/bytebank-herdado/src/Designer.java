@@ -28,7 +28,7 @@ public class Designer extends Funcionario {
 //---- Getters e Setters ----//
 	
 	public double getBonificacao () {
-		return super.getBonificacao() + 100;
+		return  200;
 	}
 
 	//	public void setSenha (int senha) {

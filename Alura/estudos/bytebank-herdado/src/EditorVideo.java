@@ -28,7 +28,7 @@ public class EditorVideo extends Funcionario {
 //---- Getters e Setters ----//
 	
 	public double getBonificacao () {
-		return super.getBonificacao() + 100;
+		return 150;
 	}
 
 	//	public void setSenha (int senha) {

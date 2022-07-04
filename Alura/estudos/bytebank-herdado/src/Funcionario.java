@@ -1,5 +1,5 @@
 
-public class Funcionario {
+public abstract class Funcionario {
 
 //---- Atributos ----//
 
@@ -15,9 +15,9 @@ public class Funcionario {
 	
 //---- Getters e Setters ----//
 	
-	public double getBonificacao () {
-		return this.salario * 0.05;
-	}
+	public abstract double getBonificacao ();// {
+		//return -1; //this.salario * 0.05;
+	//}
 	
 	public String getNome () {
 		return nome;
