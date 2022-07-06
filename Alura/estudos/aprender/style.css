@@ -1,0 +1,66 @@
+
+:root {
+    --cor1: #90EE90;
+    --cor2: #8FBC8F;
+    --cor3: #7FFFD4;
+    --cor4: #FF7F50;
+    --cor5: #A52A2A;
+    --font1:  Arial, Helvetica, sans-serif;
+    --font2: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    --size1: .5em;
+    --size2: 1em;
+    --size3: 1.5em;
+    --size4: 2em;
+    --size5: 700;
+}
+
+body{
+    background-color: var(--cor1);
+    font-family: var(--font1);
+    color: var(--cor5);
+
+    margin: 0;
+}
+
+.titulo {
+    font-size: var(--size4);
+    font-weight: var(--size5);
+
+    background-color: var(--cor3);
+    border: 1px solid var(--cor5);
+
+    display: block;
+    margin: 0;
+    padding: var(--size1);
+    text-align: center;
+
+}
+
+.lista {
+    text-decoration: none;
+    font-size: var(--size3);
+    text-align: center;
+    list-style: none;
+}
+
+.lista__titulo {
+    font-weight: var(--size5);
+    font-size: var(--size2);
+    color: var(--cor5);
+}
+
+.lista__titulo::before {
+    content: "< ";
+}
+
+.lista__titulo::after {
+    content: " >";
+}
+
+.lista__item {
+    margin-bottom: var(--size1);
+    color: var(--cor4);
+    font-family: var(--font1);
+}
+
+
