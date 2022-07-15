@@ -1,0 +1,149 @@
+:root {
+    --cor1: #000000;
+    --cor2: #a00000;
+    --cor3: #ff1100;
+    --cor4: #ff716a;
+    --cor5: #ffffff;
+
+    --degrade: linear-gradient(-45deg, #ff716a, #ff1100);;
+
+    --font1: monospace;
+    --font2: Arial, Helvetica, sans-serif;
+    --font3: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor5);
+}
+
+.cabecalho {
+    background-color: #a00000;
+    color: var(--cor5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.link-titulo__cabecalho {
+    text-decoration: none;
+    color: var(--cor4);
+}
+
+.link-titulo__cabecalho:hover {
+    color: var(--cor5);
+    transition: .5s;
+}
+
+.titulo__cabecalho{
+    font-family: var(--font1);
+}
+
+.titulo__cabecalho::before {
+    content: '[ ';
+}
+
+.titulo__cabecalho::after {
+    content: ' ]';
+}
+
+.menu__cabecalho {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.item-menu__cabecalho {
+    text-decoration: none;
+    color: var(--cor5);
+    font-family: var(--font1);
+    font-size: 1.5em;
+}
+
+.item-menu__cabecalho:hover {
+    color: var(--cor4);
+    transition: .3s;
+}
+
+.conteudo {
+    max-width: 60%;
+    margin: 0 auto;
+    justify-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.titulo {
+    text-align: center;
+    color: var(--cor3);
+    font-family: var(--font1);
+    font-size: 3em;
+    font-weight: 700;    
+}
+
+.principal {
+    background: var(--degrade);
+    padding: .1em 1.1em;
+    border-radius: 1em;
+}
+
+.principal:hover {
+    background: var(--cor2);
+    transition: .3s;
+}
+
+.titulo__principal {
+    text-align: center;
+    color: var(--cor5);
+    font-family: var(--font2);
+}
+
+.paragrafo__principal{
+    color: var(--cor5);
+    font-family: var(--font1);
+    text-align: justify;
+}
+
+.secundario {
+    background: var(--degrade);
+    padding: .1em 1.1em;
+    border-radius: 1em;
+}
+
+.secundario:hover {
+    background: var(--cor2);
+    transition: .3s;
+}
+
+.titulo__secundario {
+    text-align: center;
+    color: var(--cor5);
+    font-family: var(--font2);
+}
+
+.paragrafo__secundario {
+    color: var(--cor5);
+    font-family: var(--font1);
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+.rodape {
+    width: 100%;
+    height: 1.5em;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: var(--cor2);
+    color: var(--cor4);
+    font-weight: 700;
+}
