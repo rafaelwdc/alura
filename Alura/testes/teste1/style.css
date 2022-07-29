@@ -73,7 +73,7 @@ body {
     margin: 0 auto;
     justify-self: stretch;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1em;
 }
 
@@ -92,10 +92,10 @@ body {
     border-radius: 1em;
 }
 
-.principal:hover {
+/* .principal:hover {
     background: var(--cor2);
     transition: .3s;
-}
+} */
 
 .titulo__principal {
     text-align: center;
@@ -115,10 +115,10 @@ body {
     border-radius: 1em;
 }
 
-.secundario:hover {
+/* .secundario:hover {
     background: var(--cor2);
     transition: .3s;
-}
+} */
 
 .titulo__secundario {
     text-align: center;

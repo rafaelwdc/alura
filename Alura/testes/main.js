@@ -9,6 +9,6 @@ function mostra (frase) {
 
 var tabuada = parseInt(prompt("Qual a tabuada que você deseja?"));
 
-while(var contador = 1; contador <= 10; contador++) {
+for(var contador = 1; contador <= 10; contador++) {
     mostra(taboada + " X " + contador + " = " + (taboada + contador));
 }
