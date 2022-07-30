@@ -84,7 +84,11 @@ const clientes = [{
     saldo: 1000,
     depositar:function(valor) {this.saldo += valor; },
     sacar:function(valor) {this.saldo -= valor; },
-    transferir:function(valor) {this.saldo -= valor}
+    transferir:function(valor, cliente1, cliente2) 
+    {
+        cliente1.saldo -= valor;
+        cliente2.saldo += valor;
+    }
 },
 {
     nome: "Patricky",
@@ -94,32 +98,35 @@ const clientes = [{
     saldo: 1000,
     depositar:function(valor) {this.saldo += valor; },
     sacar:function(valor) {this.saldo -= valor; },
-    transferir:function(valor, clientes, clientes) {this.saldo -= valor}
-}]
+    transferir:function(valor, cliente1, cliente2) 
+    {
+        cliente1.saldo -= valor;
+        cliente2.saldo += valor;
+    }}]
 
 console.log("\n\n//-----------------# {} #-----------------//\n\n");
 
 console.log(`Sr. ${clientes[0].nome} seu saldo da conta ${clientes[0].conta} é de ${clientes[0].saldo}`);
-clientes[0].depositar(50);
+clientes[0].depositar(100);
 console.log(`Deposito Efetuado com Sucesso.`);
 console.log(`Sr. ${clientes[0].nome} seu saldo da conta ${clientes[0].conta} é de ${clientes[0].saldo}`);
-clientes[0].sacar(75);
+clientes[0].sacar(200);
 console.log(`Saque Efetuado com Sucesso.`);
 console.log(`Sr. ${clientes[0].nome} seu saldo da conta ${clientes[0].conta} é de ${clientes[0].saldo}`);
-clientes[0].transferir(35);
+clientes[0].transferir(300,clientes[0], clientes[1]);
 console.log(`Transferência Efetuada com Sucesso.`);
 console.log(`Sr. ${clientes[0].nome} seu saldo da conta ${clientes[0].conta} é de ${clientes[0].saldo}`);
 
 console.log("\n\n//-----------------# {} #-----------------//\n\n");
 
 console.log(`Sr. ${clientes[1].nome} seu saldo da conta ${clientes[1].conta} é de ${clientes[1].saldo}`);
-clientes[1].depositar(50);
+clientes[1].depositar(100);
 console.log(`Deposito Efetuado com Sucesso.`);
 console.log(`Sr. ${clientes[1].nome} seu saldo da conta ${clientes[1].conta} é de ${clientes[1].saldo}`);
-clientes[1].sacar(75);
+clientes[1].sacar(200);
 console.log(`Saque Efetuado com Sucesso.`);
 console.log(`Sr. ${clientes[1].nome} seu saldo da conta ${clientes[1].conta} é de ${clientes[1].saldo}`);
-clientes[1].transferir(35);
+clientes[0].transferir(300,clientes[1], clientes[0]);
 console.log(`Transferência Efetuada com Sucesso.`);
 console.log(`Sr. ${clientes[1].nome} seu saldo da conta ${clientes[1].conta} é de ${clientes[1].saldo}`);
 console.log("\n\n//-----------------# {} #-----------------//\n\n");
