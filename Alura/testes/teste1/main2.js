@@ -13,9 +13,14 @@ class Conta extends Clientes{
         this.digito = digito;
         this.saldo = saldo;
     };
+
+    criarConta(){
+    console.log(`Sr(a) ${this.nome}, Conta criada com Sucesso.\n-- Nome: ${this.nome};\n-- Idade: ${this.idade} anos de idade;\n-- Agência: ${this.agencia};\n-- Conta: ${this.conta}-${this.digito};\n-- Saldo disponivel: R$ ${this.saldo}. \n`);
+    };
+
     exibirSaldo(){
         console.log(`--  Olá, Sr(a) ${this.nome}. \n-- Saldo disponivel: R$ ${this.saldo}\n`);
-    }
+    };
 
     depositar(valor) {
         this.saldo += valor; 
@@ -34,20 +39,20 @@ class Conta extends Clientes{
     };
 };
 
+class ContaPoupanca extends Conta {
+    constructor(nome,idade,conta,agencia,digito,saldo,saldoPoup){
+        super(nome,idade,conta,agencia,digito,saldo);
+        this.saldoPoup = saldoPoup;
+    }
+}
+
 
 console.log(`\n\n//----------------------- # [ Começo ] # -----------------------//\n`);
 
 const contaRafael = new Conta("Rafael",29,"81510030","77742","0",1000);
-
-console.log(`Sr(a) ${contaRafael.nome}, Conta criada com Sucesso.\n-- Nome: ${contaRafael.nome};\n-- Idade: ${contaRafael.idade} anos de idade;\n-- Agência: ${contaRafael.agencia};\n-- Conta  ${contaRafael.conta}-${contaRafael.digito};\n-- Saldo disponivel: R$ ${contaRafael.saldo}. \n`);
-
-//console.log(contaRafael);
-
+contaRafael.criarConta();
 const contaPatricky = new Conta("Patricky",31,"81910180","77742","5",1000);
-
-console.log(`Sr(a) ${contaPatricky.nome}, Conta criada com Sucesso.\n-- Nome: ${contaPatricky.nome};\n-- Idade: ${contaPatricky.idade} de idade;\n-- Agência: ${contaPatricky.agencia};\n-- Conta  ${contaPatricky.conta}-${contaPatricky.digito};\n-- Saldo disponivel: R$ ${contaPatricky.saldo}. \n`);
-
-//console.log(contaPatricky);
+contaPatricky.criarConta();
 
 contaPatricky.exibirSaldo();
 contaRafael.exibirSaldo();
