@@ -1,0 +1,63 @@
+:root{
+    /* -- [Cores] -- */
+    --cor1: #E9ECF5;
+    --cor2: #CCD6EB;
+    --cor3: #A3C3D9;
+    --cor4: #AE76A6;
+    --cor5: #32213A;
+    /* -- [Fontes] -- */
+    --font1: monospace;
+    --font2: Arial, Helvetica, sans-serif;
+    --font3: fantasy;
+    --font4: cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor1);
+
+}
+
+/* -- [Cabeçalho] -- */
+
+.cabecalho {
+    width: 100vw;
+    height: 10em;
+    background-color: var(--cor3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+.titulo__cabecalho
+
+.menu__cabecalho
+
+.item-menu__cabecalho
+
+
+
+
+
+
+/* -- [Conteúdo] -- */
+.conteudo {
+    height: 50vh;
+    background-color: var(--cor2);
+}
+
+
+/*  -- [Rodapé] -- */
+.rodape {
+    background-color: var(--cor5);
+    height: 5em;
+}
