@@ -1,18 +1,39 @@
-const livros = require('./listaLivros');
-const menorValor = require('./menorValor');
+const { edGalho, edFolha } = require('./arrays');
 
-for (let atual = 0; atual < livros.length; atual++) {
-  let menor = menorValor(livros, atual);
+function juntaListas(lista1, lista2) {
+  let listaFinal = [];
+  let posicaoAtualLista1 = 0;
+  let posicaoAtualLista2 = 0;
+  let atual = 0;
 
-  let livroAtual = livros[atual];
-  console.log(livros[atual]);
-  let livroMenorPreco = livros[menor];
-  console.log(livros[menor]);
+  while (posicaoAtualLista1 < lista1.length && posicaoAtualLista2 < lista2.length) {
+    let produtoAtualLista1 = lista1[posicaoAtualLista1];
+    let produtoAtualLista2 = lista2[posicaoAtualLista2];
 
+    if (produtoAtualLista1.preco < produtoAtualLista2.preco) {
+      listaFinal[atual] = produtoAtualLista1;
+      posicaoAtualLista1++;
+    } else {
+      listaFinal[atual] = produtoAtualLista2;
+      posicaoAtualLista2++;
+    }
 
-  livros[atual] = livroMenorPreco;
-  livros[menor] = livroAtual;
+    atual++;
+  }
 
-};
+  while (posicaoAtualLista1 < lista1.length) {
+    listaFinal[atual] = lista1[posicaoAtualLista1];
+    posicaoAtualLista1++;
+    atual++;
+  }
 
-console.log(livros);
+  while (posicaoAtualLista2 < lista2.length) {
+    listaFinal[atual] = lista2[posicaoAtualLista2];
+    posicaoAtualLista2++;
+    atual++;
+  }
+
+  return listaFinal;
+}
+
+console.log(juntaListas(edGalho, edFolha))
