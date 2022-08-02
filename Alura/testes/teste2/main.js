@@ -8,19 +8,22 @@ function exibirMensagem(mensagem){
 };
 
 function listaDeJogos(){
-    exibirMensagem(`\n###############################################\n\n-- # [Jogos de PlayStation] # --`);
+    exibirMensagem(`\n###############################################\n`);
+    exibirMensagem(`-- # [Jogos de PlayStation] # --`);
     exibirMensagem(`\n###############################################\n`);
     for (let i = 0; i < listaPlayStation.length; i++){
         listaPlayStation[i].informacoes();
         exibirMensagem(`\n###############################################\n`);
     };
-    exibirMensagem(`\n###############################################\n-- # [Jogos da Nintendo] # --`);
+    exibirMensagem(`-- # [Jogos da Nintendo] # --`);
     exibirMensagem(`\n###############################################\n`);
     for (let i = 0; i < listaNintendo.length; i++){
         listaNintendo[i].informacoes();
         exibirMensagem(`\n###############################################\n`);
     };
-    exibirMensagem(`\n-- # [Fim da Lista] # --\n###############################################\n`);
+    exibirMensagem(`-- # [Fim da Lista] # --\n\n###############################################\n`);
+
+    exibirMensagem(`-- Saldo final: ${listaPlayStation.length+listaNintendo.length} jogos no total --\n-- Jogos de PlayStation: ${listaPlayStation.length} jogos --\n-- Jogos de Nintendo: ${listaNintendo.length} jogos --\n\n###############################################\n`);
 };
 
 class Jogos {
@@ -91,6 +94,6 @@ const marioAllStars = new Nintendo("Super Mario 3D All Stars","Nintendo","Mario"
 const listaPlayStation = [assassinsCreedIVBlackFlag,assassinsCreedUnity,bloodborne,fifa15,horizonZeroDawn,infamousSecondSon,godOfWar,godOfWarIII,gtaV,nioh,noMansSky,projectCars,redDeadRedemptionII,spiderMan,uncharted4];
 const listaNintendo = [donkeyKongContryTropicalFreeze,zeldaLinksAwakening,zeldaBreathOfTheWild,marioParty,marioOdyssey,mario3d,marioAllStars];
 
-exibirMensagem(listaPlayStation[4])
+//exibirMensagem(listaPlayStation[4])
 
-//listaDeJogos();
+listaDeJogos();
