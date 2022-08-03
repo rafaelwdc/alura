@@ -81,7 +81,7 @@ const uncharted4 = new PlayStation ("Uncharted 4: A Theif's End","Naughty Dog","
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------//
 
-const donkeyKongContryTropicalFreeze = new Nintendo ("Donkey Kong Contry: Tropical Freeze","Nintendo","Donkey Kong","Até 2 na mesma tela ou Online");
+const donkeyKongCountryTropicalFreeze = new Nintendo ("Donkey Kong Country: Tropical Freeze","Nintendo","Donkey Kong","Até 2 na mesma tela ou Online");
 const zeldaLinksAwakening = new Nintendo ("The Legend of Zelda: Link's Awakening","Nintendo","Zelda","Single Player");
 const zeldaBreathOfTheWild = new Nintendo ("The Legend of Zelda: Breath of the Wild","Nintendo","Zelda","Single Player");
 const marioParty = new Nintendo("Super Mario Party","Nintendo","Mario","Até 4 na mesma tela ou Online");
@@ -92,7 +92,7 @@ const marioAllStars = new Nintendo("Super Mario 3D All Stars","Nintendo","Mario"
 //----------------------------------------------------------------------------------------------------------------------------------------------------//
 
 const listaPlayStation = [assassinsCreedIVBlackFlag,assassinsCreedUnity,bloodborne,fifa15,horizonZeroDawn,infamousSecondSon,godOfWar,godOfWarIII,gtaV,nioh,noMansSky,projectCars,redDeadRedemptionII,spiderMan,uncharted4];
-const listaNintendo = [donkeyKongContryTropicalFreeze,zeldaLinksAwakening,zeldaBreathOfTheWild,marioParty,marioOdyssey,mario3d,marioAllStars];
+const listaNintendo = [donkeyKongCountryTropicalFreeze,zeldaLinksAwakening,zeldaBreathOfTheWild,marioParty,marioOdyssey,mario3d,marioAllStars];
 
 //exibirMensagem(listaPlayStation[4])
 
