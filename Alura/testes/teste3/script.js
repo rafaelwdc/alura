@@ -1,5 +1,5 @@
-let tabuada = 1;
-for (let i = 0; i < 10;i++) {
+const tabuada = 777;
+for (let i = 0; i <= 777;i++) {
 let conta = i * tabuada;
 console.log(`${i} x ${tabuada} = ${conta}`);
-}
+};
