@@ -38,11 +38,38 @@ body {
     
 }
 
-.titulo__cabecalho
+.titulo__cabecalho {
+    margin-left: 3em;
+    font-size: 3em;
+    font-family: var(--font1);
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--cor1);
+}
 
-.menu__cabecalho
+.titulo__cabecalho:hover {
+    color: var(--cor5);
+    transition: 500ms;
+}
 
-.item-menu__cabecalho
+.menu__cabecalho{
+    font-size: 1.5em;
+    margin-right: 3em;
+    display: flex;
+    gap: 2em;
+}
+
+.item-menu__cabecalho {
+    font-weight: 700;
+    font-family: var(--font2);
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+.item-menu__cabecalho:hover {
+    color: var(--cor4);
+    transition: 500ms;
+}
 
 
 
@@ -51,8 +78,13 @@ body {
 
 /* -- [Conteúdo] -- */
 .conteudo {
-    height: 50vh;
+    width: 1700px;
+    height: 74vh;
     background-color: var(--cor2);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
 }
 
 
@@ -60,4 +92,12 @@ body {
 .rodape {
     background-color: var(--cor5);
     height: 5em;
+}
+
+.parafrago__rodape {
+    font-family: var(--font1);
+    color: var(--cor1);
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
 }

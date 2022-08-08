@@ -3,11 +3,12 @@
         // Jogos de PlayStation & Nintendo // [ Criado em 01/08/2022; ]
         //*********************************//
 
+    
 function exibirMensagem(mensagem){  
     console.log(mensagem)
 };
 
-function listaDeJogos(){
+function listaDeJogos() {
     exibirMensagem(`\n###############################################\n`);
     exibirMensagem(`-- # [Jogos de PlayStation] # --`);
     exibirMensagem(`\n###############################################\n`);
@@ -61,6 +62,7 @@ class Nintendo extends Jogos {
         exibirMensagem(`-- Nome do Jogo: ${this.nome};\n-- Desenvolvido pela Empresa: ${this.desenvolvedora};\n-- Saga: ${this.saga};\n-- Multiplayer: ${this.multiplayer}.\n`);
     };
 };
+
 //----------------------------------------------------------------------------------------------------------------------------------------------------//
 
 const assassinsCreedIVBlackFlag = new PlayStation ("Assassin's Creed IV: Black Flag","Ubisoft","Black Label","Acima de 18 Anos","Simples");
@@ -97,3 +99,4 @@ const listaNintendo = [donkeyKongCountryTropicalFreeze,zeldaLinksAwakening,zelda
 //exibirMensagem(listaPlayStation[4])
 
 listaDeJogos();
+
