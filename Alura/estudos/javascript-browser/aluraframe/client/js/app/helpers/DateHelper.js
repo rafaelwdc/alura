@@ -10,7 +10,7 @@ class DateHelper {
 
     static textoParaDate(texto) {
 
-        if(!/\D{4}-\D{2}-\d{2}/.test(texto)) 
+        if(/\D{4}-\D.{2}-\d{2}/.test(texto)) 
             throw new Error(`Deve estar no formato aaaa-mm-dd`);
         
         return Date(...texto.split('-').map((item, indice) => item - indice % 2));
