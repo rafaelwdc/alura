@@ -3,9 +3,6 @@ import Cliente from "./Cliente.js";
 export default class ContaCorrente {
 
     static numeroDeContas = 0;
-    agencia;
-    _cliente;
-    _saldo = 0;
 
 //-----------------Getters & Setters--------------------//
 
@@ -28,28 +25,29 @@ export default class ContaCorrente {
     constructor(agencia,cliente) {
         this.agencia = agencia;
         this.cliente = cliente;
+        this._saldo = 0;
         ContaCorrente.numeroDeContas +=1;
     };
 
 //---------------------Metodos------------------------//
 
-    sacar(valor) {
-        if(this._saldo >= valor) {
-            this._saldo -= valor;
-            return valor;
-        };
+sacar(valor) {
+    if(this._saldo >= valor) {
+        this._saldo -= valor;
+        return valor;
     };
+};
 
-    depositar(valor) {
-        if(valor < 0) {
-            return;
-        };
-        this._saldo += valor;
+depositar(valor) {
+    if(valor < 0) {
+        return;
     };
+    this._saldo += valor;
+};
 
-    transferir(valor,conta) {
-        const valorSacado =  this.sacar(valor);
-        conta.depositar = valorSacado;
-    };
+transferir(valor,conta) {
+    const valorSacado =  this.sacar(valor);
+    conta.depositar = valorSacado;
+};
 
 };
