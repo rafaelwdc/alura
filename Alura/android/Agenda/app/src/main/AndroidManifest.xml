@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="alura.com.agenda">
 
-    <application android:icon="@mipmap/">
+    <application tools:ignore="ExtraText,MissingApplicationIcon">
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
