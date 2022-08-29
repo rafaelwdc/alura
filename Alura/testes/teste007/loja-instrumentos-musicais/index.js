@@ -3,7 +3,7 @@ function exibirMensagem(texto) {
 };
 
 function venda(funcionario,instrumento,cliente) {
-    exibirMensagem(`Compra efetuada com sucesso, ${instrumento.tipo}, da marca ${instrumento.fabricante}, com o modelo ${instrumento.formatoDoCorpo}, comprado pelo ${cliente.nome}, e vendido pelo vendedor: ${funcionario.nome}\n\n--[ #### Nota Fiscal #### ]--\n--Instrumentos BrosFreitas --\n-//--//--//--//--//--//--//--\n-- Cliente: ${cliente.nome} --\n-- E-mail: ${cliente._email} --\n-- Pagamento: ${cliente.formaDePagamento} --\n-- `)
+    exibirMensagem(`Compra efetuada com sucesso, ${instrumento.tipo}, da marca ${instrumento.fabricante}, com o modelo ${instrumento.formatoDoCorpo}, comprado pelo ${cliente.nome}, e vendido pelo vendedor: ${funcionario.nome}\n\n--[ #### Nota Fiscal #### ]--\n--Instrumentos BrosFreitas --\n-//--//--//--//--//--//--//--\n-- Cliente: ${cliente.nome} --\n-- E-mail: ${cliente._nodeemail} --\n-- Pagamento: ${cliente.formaDePagamento} --\n-- `)
 };
 
 
@@ -17,7 +17,7 @@ const instrumento = new Cordas('LDT','EDP','Guitarra LDT Prata com captação de
 
 const cliente = new Cliente('Clienteson','XXX.XXX.XXX-XX','cliente@loja.com','Cartão de Credito')
 const funcionario = new Funcionario('Funcionarioson','XXX.XXX.XXX-XX','funcionario@loja.com','func','1234');
-const admin = new Admin('Adminson','XXX.XXX.XXX-XX','cliente@loja.com','admin','admin');
+const admin = new Admin('Adminson','XXX.XXX.XXX-XX','admin@loja.com','admin','admin');
 
 exibirMensagem(cliente);
 exibirMensagem(funcionario);
