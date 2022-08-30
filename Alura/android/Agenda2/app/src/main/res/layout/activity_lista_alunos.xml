@@ -6,14 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-
-        android:layout_width="match_parent"
-        android:layout_height="15dp" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/activity_lista_aluno_fab_novo_aluno"
+        android:id="@+id/activity_lista_alunos_fab_novo_aluno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -29,7 +23,7 @@
         tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck" />
 
     <ListView
-        android:id="@+id/activity_lista_de_alunos_listview"
+        android:id="@+id/activity_lista_alunos_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp" />
