@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.alura.agenda.R;
@@ -23,16 +22,22 @@ public class FormularioAlunoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_aluno);
         setTitle(TITULO_APPBAR);
         inicializacaoDosCampos();
         configuraBotaoSalvar();
+
         Intent dados = getIntent();
+        if(dados.hasExtra("aluno")) {
         aluno = (Aluno) dados.getSerializableExtra("aluno");
         campoNome.setText(aluno.getNome());
         campoTelefone.setText(aluno.getTelefone());
         campoEmail.setText(aluno.getEmail());
+        } else {
+            aluno = new Aluno();
+        }
     }
 
     private void configuraBotaoSalvar() {
@@ -41,7 +46,11 @@ public class FormularioAlunoActivity extends AppCompatActivity {
 //            Aluno aluno = criaAluno();
 //            salva(aluno);
             preencheAluno();
-            dao.edita(aluno);
+            if(aluno.temIdValido()) {
+                dao.edita(aluno);
+            } else {
+                dao.salva(aluno);
+            }
             finish();
         });
     }
