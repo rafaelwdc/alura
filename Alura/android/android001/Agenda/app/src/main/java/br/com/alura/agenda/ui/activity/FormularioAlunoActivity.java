@@ -2,7 +2,6 @@ package br.com.alura.agenda.ui.activity;
 
 import static br.com.alura.agenda.ui.activity.ConstantesActivities.CHAVE_ALUNO;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
