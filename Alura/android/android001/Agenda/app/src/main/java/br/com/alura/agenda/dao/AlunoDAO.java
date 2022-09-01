@@ -10,7 +10,6 @@ import br.com.alura.agenda.model.Aluno;
 public class AlunoDAO {
 
     private final static List<Aluno> alunos = new ArrayList<>();
-
     private static int contadorDeIds = 1;
 
     public void salva(Aluno aluno) {
@@ -33,7 +32,6 @@ public class AlunoDAO {
 
     @Nullable
     private Aluno BuscaAlunoPeloId(Aluno aluno) {
-        Aluno alunoEncontrado = null;
         for (Aluno a :
                 alunos) {
             if (a.getId() == aluno.getId()) {
@@ -44,6 +42,13 @@ public class AlunoDAO {
     }
 
     public List<Aluno> todos() {
-        return alunos;
+        return new ArrayList<>(alunos);
+    }
+
+    public void remove(Aluno aluno) {
+        Aluno alunoDevolvido = BuscaAlunoPeloId(aluno);
+        if(alunoDevolvido != null) {
+            alunos.remove(alunoDevolvido);
+        }
     }
 }

@@ -40,12 +40,16 @@ public class ListaAlunosActivity extends AppCompatActivity {
 
     private void configuraFabNovoAluno() {
         FloatingActionButton botaoNovoAluno = findViewById(R.id.activity_lista_alunos_fab_novo_aluno);
-        botaoNovoAluno.setOnClickListener(view -> abreFormularioModoInsereAluno());
+        botaoNovoAluno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abreFormularioModoInsereAluno();
+            }
+        });
     }
 
     private void abreFormularioModoInsereAluno() {
-        startActivity(new Intent(ListaAlunosActivity.this,
-                FormularioAlunoActivity.class));
+        startActivity(new Intent(this, FormularioAlunoActivity.class));
     }
 
     @Override
@@ -59,15 +63,24 @@ public class ListaAlunosActivity extends AppCompatActivity {
         final List<Aluno> alunos = dao.todos();
         configuraAdapter(listaDeAlunos, alunos);
         configuraListenerDeCliquePorItem(listaDeAlunos);
+
+        listaDeAlunos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int posicao, long id) {
+                Aluno alunoEscolhido = (Aluno) adapterView.getItemAtPosition(posicao);
+                dao.remove(alunoEscolhido);
+                return true;
+            }
+        });
     }
 
     private void configuraListenerDeCliquePorItem(ListView listaDeAlunos) {
         listaDeAlunos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-             @Override
-             public void onItemClick(AdapterView<?> adapterView, View view, int posicao, long l) {
-                Aluno alunoEscolhido = (Aluno) adapterView.getItemAtPosition(posicao);
-                abreFormularioModoEditaAluno(alunoEscolhido);
-             }
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int posicao, long id) {
+                Aluno alunoEscolido = (Aluno) adapterView.getItemAtPosition(posicao);
+                abreFormularioModoEditaAluno(alunoEscolido);
+            }
         });
     }
 
