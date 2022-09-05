@@ -2,6 +2,7 @@ package br.com.alura.agenda.ui.activity;
 
 import static br.com.alura.agenda.ui.activity.ConstantesActivities.CHAVE_ALUNO;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -21,7 +22,7 @@ import br.com.alura.agenda.ui.ListaAlunoView;
 public class ListaAlunosActivity extends AppCompatActivity {
 
     public static final String TITULO_APPBAR = "Lista de Alunos";
-    private final ListaAlunoView listaAlunoView = new ListaAlunoView();
+    ListaAlunoView listaAlunoView = new ListaAlunoView(this);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
