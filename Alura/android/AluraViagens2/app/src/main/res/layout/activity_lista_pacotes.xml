@@ -7,7 +7,7 @@
     tools:context=".ListaPacotesActivity" >
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/cabecalho_especiais"
         android:layout_width="0dp"
         android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
         app:srcCompat="@android:color/holo_purple" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titulo_cabecalho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/subtitulo_cabecalho"
         android:layout_width="59dp"
         android:layout_height="20dp"
         android:layout_marginTop="12dp"
@@ -44,16 +44,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/titulo_cabecalho"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_cabecalho"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ListView android:id="@+id/lista_pacotes"
+    <ListView
+        android:id="@+id/lista_pacotes_listview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/item_pacote"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecalho_especiais"
+        app:layout_constraintVertical_bias="1.0"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
