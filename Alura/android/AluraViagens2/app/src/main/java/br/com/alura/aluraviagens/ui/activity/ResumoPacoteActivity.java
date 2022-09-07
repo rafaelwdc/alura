@@ -38,7 +38,8 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         local.setText(pacoteSaoPaulo.getLocal());
 
         ImageView imagem = findViewById(R.id.resumo_pacote_imagem);
-        Drawable drawableDoPacote = ResourceUtil.devolveDrawbable(this, pacoteSaoPaulo.getImagem());
+        Drawable drawableDoPacote = ResourceUtil.devolveDrawbable(this,
+                pacoteSaoPaulo.getImagem());
         imagem.setImageDrawable(drawableDoPacote);
 
         TextView dias = findViewById(R.id.resumo_pacote_dias);
