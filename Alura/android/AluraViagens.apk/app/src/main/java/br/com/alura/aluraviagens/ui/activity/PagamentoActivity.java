@@ -36,4 +36,4 @@ public class PagamentoActivity extends AppCompatActivity {
         String moedaBrasileira = MoedaUtil.formataParaBrasileiro(pacote.getPreco());
         preco.setText(moedaBrasileira);
     }
-} 
+}
