@@ -29,21 +29,33 @@ public class ResumoCompraActivity extends AppCompatActivity {
                 2,
                 new BigDecimal("243.99"));
 
-        TextView local = findViewById(R.id.resumo_compra_local_pacote);
-        local.setText(pacoteSaoPaulo.getLocal());
+        mostraLocal(pacoteSaoPaulo);
+        mostraImagem(pacoteSaoPaulo);
+        mostraData(pacoteSaoPaulo);
+        mostraPreco(pacoteSaoPaulo);
+        setTitle(TITULO_APPBAR);
+    }
 
-        ImageView imagem = findViewById(R.id.resumo_compra_imagem_pacote);
-        Drawable drawableDoPacote = ResourceUtil.devolveDrawbable(this, pacoteSaoPaulo.getImagem());
-        imagem.setImageDrawable(drawableDoPacote);
-
-        TextView data = findViewById(R.id.resumo_compra_data_viagem);
-        String periodoEmTexto = DataUtil.periodoEmTexto(pacoteSaoPaulo.getDias());
-        data.setText(periodoEmTexto);
-
+    private void mostraPreco(Pacote pacoteSaoPaulo) {
         TextView preco = findViewById(R.id.resumo_compra_preco_pacote);
         String moedaBrasileira = MoedaUtil.formataParaBrasileiro(pacoteSaoPaulo.getPreco());
         preco.setText(moedaBrasileira);
+    }
 
-        setTitle(TITULO_APPBAR);
+    private void mostraData(Pacote pacoteSaoPaulo) {
+        TextView data = findViewById(R.id.resumo_compra_data_viagem);
+        String periodoEmTexto = DataUtil.periodoEmTexto(pacoteSaoPaulo.getDias());
+        data.setText(periodoEmTexto);
+    }
+
+    private void mostraImagem(Pacote pacoteSaoPaulo) {
+        ImageView imagem = findViewById(R.id.resumo_compra_imagem_pacote);
+        Drawable drawableDoPacote = ResourceUtil.devolveDrawbable(this, pacoteSaoPaulo.getImagem());
+        imagem.setImageDrawable(drawableDoPacote);
+    }
+
+    private void mostraLocal(Pacote pacoteSaoPaulo) {
+        TextView local = findViewById(R.id.resumo_compra_local_pacote);
+        local.setText(pacoteSaoPaulo.getLocal());
     }
 }
