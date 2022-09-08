@@ -7,7 +7,7 @@
     tools:context=".PagamentoActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/pagamento_orientacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="22dp"
@@ -20,28 +20,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/pagamento_valor_da_compra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="28dp"
         android:text="Valor da Compra:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_orientacao" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/pagamento_preco_pacote"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@android:color/holo_green_light"
         android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/pagamento_valor_da_compra"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_valor_da_compra"
         tools:text="R$ 421,50" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/pagamento_numero_cartao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -52,5 +52,28 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_preco_pacote" />
+
+    <EditText
+        android:id="@+id/pagamento_mes_cartao"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:hint="MM"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_numero_cartao"
+        app:layout_constraintStart_toStartOf="@+id/pagamento_numero_cartao" />
+
+    <EditText
+        android:id="@+id/pagamento_ano_cartao"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:hint="AA"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_numero_cartao"
+        app:layout_constraintStart_toEndOf="@id/pagamento_mes_cartao" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
