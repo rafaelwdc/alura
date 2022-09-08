@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ResumoPacoteActivity">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/resumo_pacote_imagem"
         android:layout_width="0dp"
-        android:layout_height="140dp"
+        android:layout_height="240dp"
         android:contentDescription="@string/foto_da_imagem_de_sao_paulo"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,15 +16,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/sao_paulo_sp" />
+        tools:srcCompat="@drawable/sao_paulo_sp" />
 
     <TextView
         android:id="@+id/resumo_pacote_local"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:textSize="24sp"
+        android:layout_margin="12dp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_imagem"
@@ -36,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/resumo_pacote_local"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_local"
@@ -47,7 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:chainUseRtl="true"
+        app:layout_constraintEnd_toStartOf="@id/resumo_pacote_preco"
         app:layout_constraintStart_toStartOf="@+id/resumo_pacote_dias"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_dias"
         tools:text="09/12 - 10/12 de 2017" />
@@ -57,25 +55,26 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="20sp"
+        android:gravity="end"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="30sp"
         app:chainUseRtl="false"
         app:layout_constraintBottom_toBottomOf="@+id/resumo_pacote_data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/resumo_pacote_data"
-        tools:text="R$ 243,99"
-        android:textAlignment="viewEnd"/>
+        tools:ignore="TextContrastCheck"
+        tools:text="R$ 243,99" />
 
     <TextView
         android:id="@+id/resumo_pacote_preco_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Preço Final :"
+        android:layout_marginBottom="16dp"
+        android:text="@string/preco_final"
         app:layout_constraintBottom_toTopOf="@+id/resumo_pacote_preco"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/resumo_pacote_preco" />
 
     <Button
         android:id="@+id/resumo_pacote_botao_realiza_pagamento"
@@ -91,5 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

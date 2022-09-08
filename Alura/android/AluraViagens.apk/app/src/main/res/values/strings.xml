@@ -5,4 +5,5 @@
     <string name="conteudo_do_banner_inicial">Banner inicial dos pacotes</string>
     <string name="foto_da_imagem_de_sao_paulo">Foto da imagem de São Paulo</string>
     <string name="realizar_pagamento">Realizar Pagamento</string>
+    <string name="preco_final">Preço Final :</string>
 </resources>
