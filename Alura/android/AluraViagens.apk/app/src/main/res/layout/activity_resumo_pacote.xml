@@ -71,7 +71,6 @@
         android:id="@+id/resumo_pacote_preco_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:text="@string/preco_final"
         app:layout_constraintBottom_toTopOf="@+id/resumo_pacote_preco"
         app:layout_constraintEnd_toEndOf="@id/resumo_pacote_preco" />
