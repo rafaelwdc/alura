@@ -7,7 +7,7 @@
     tools:context=".ResumoCompraActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/resumo_compra_banner_inicial"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:background="@android:color/holo_orange_dark"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/resumo_compra_parabens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Parabéns!"
@@ -25,26 +25,26 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/resumo_compra_banner_inicial"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/resumo_compra_banner_inicial"
+        app:layout_constraintTop_toTopOf="@+id/resumo_compra_banner_inicial"
         app:layout_constraintVertical_bias="0.13" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/resumo_compra_realizada_sucesso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Compra realizada com sucesso! :)"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toBottomOf="@+id/resumo_compra_banner_inicial"
+        app:layout_constraintEnd_toEndOf="@+id/resumo_compra_banner_inicial"
+        app:layout_constraintStart_toStartOf="@+id/resumo_compra_banner_inicial"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_parabens" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/resumo_compra_confira_resumo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -53,50 +53,50 @@
         android:text="Confira o resumo da compra: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_banner_inicial" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/resumo_compra_imagem_pacote"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/resumo_compra_local_pacote"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_confira_resumo"
         app:srcCompat="@drawable/sao_paulo_sp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/resumo_compra_local_pacote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toTopOf="@+id/resumo_compra_data_viagem"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_imagem_pacote"
         tools:text="São Paulo" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/resumo_compra_data_viagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/resumo_compra_preco_pacote"
+        app:layout_constraintStart_toStartOf="@+id/resumo_compra_local_pacote"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_local_pacote"
         tools:text="08/12 - 10/12 de 2017" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/resumo_compra_preco_pacote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/resumo_compra_data_viagem"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_compra_data_viagem"
         tools:text="R$ 243,99" />
 </androidx.constraintlayout.widget.ConstraintLayout>
