@@ -22,8 +22,11 @@ public class ListaNotasActivity extends AppCompatActivity {
         ListView listaNotas = findViewById(R.id.listView);
 
         NotaDAO dao = new NotaDAO();
-        dao.insere(new Nota("Primeira nota",
-                "Primeira descrição"));
+        for (int i = 1;i <= 10000; i++) {
+            dao.insere(new Nota("Titulo " + i,
+                    "Primeira " + i));
+        }
+
 
         List<Nota> todasNotas = dao.todos();
 
