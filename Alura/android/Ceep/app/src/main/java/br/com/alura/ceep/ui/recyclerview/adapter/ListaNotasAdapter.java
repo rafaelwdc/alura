@@ -1,4 +1,4 @@
-package br.com.alura.ceep.ui.recyclerview.activity;
+package br.com.alura.ceep.ui.recyclerview.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
