@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Agenda</string>
+    <string name="app_name">Lista de Alunos</string>
     <string name="agenda">Agenda</string>
     <string name="todo">TODO</string>
     <string name="todos">TODO</string>
