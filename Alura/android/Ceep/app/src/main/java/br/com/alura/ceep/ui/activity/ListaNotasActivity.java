@@ -11,8 +11,7 @@ import java.util.List;
 import br.com.alura.ceep.R;
 import br.com.alura.ceep.dao.NotaDAO;
 import br.com.alura.ceep.model.Nota;
-import br.com.alura.ceep.ui.adapter.ListaNotasAdapter;
-import br.com.alura.ceep.ui.recyclerview.activity.ListaNotasAdapters;
+import br.com.alura.ceep.ui.recyclerview.activity.ListaNotasAdapter;
 
 public class ListaNotasActivity extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class ListaNotasActivity extends AppCompatActivity {
         }
         List<Nota> todasNotas = dao.todos();
 
-        listaNotas.setAdapter(new ListaNotasAdapters(this, todasNotas));
+        listaNotas.setAdapter(new ListaNotasAdapter(this, todasNotas));
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         listaNotas.setLayoutManager(layoutManager);
     }
