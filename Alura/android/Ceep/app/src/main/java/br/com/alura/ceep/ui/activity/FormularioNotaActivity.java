@@ -16,6 +16,9 @@ import br.com.alura.ceep.model.Nota;
 
 public class FormularioNotaActivity extends AppCompatActivity {
 
+    public static final String CHAVE_NOTA = "nota";
+    public static final int CODIGO_RESULTADO_NOTA_CRIADA = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +33,29 @@ public class FormularioNotaActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.menu_formulario_nota_ic_salva) {
-            EditText titulo = findViewById(R.id.formulario_nota_titulo);
-            EditText descricao = findViewById(R.id.formulario_nota_descricao);
-            Nota notaCriada = new Nota(titulo.getText().toString(),
-                    descricao.getText().toString());
-            Intent resultadoInsercao = new Intent();
-            resultadoInsercao.putExtra("nota", notaCriada);
-            setResult(2, resultadoInsercao);
+        if (ehMenuSalvaNota(item)) {
+            Nota notaCriada = criaNota();
+            retornaNota(notaCriada);
             finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void retornaNota(Nota nota) {
+        Intent resultadoInsercao = new Intent();
+        resultadoInsercao.putExtra(CHAVE_NOTA, nota);
+        setResult(CODIGO_RESULTADO_NOTA_CRIADA, resultadoInsercao);
+    }
+
+    @NonNull
+    private Nota criaNota() {
+        EditText titulo = findViewById(R.id.formulario_nota_titulo);
+        EditText descricao = findViewById(R.id.formulario_nota_descricao);
+        return new Nota(titulo.getText().toString(),
+                descricao.getText().toString());
+    }
+
+    private boolean ehMenuSalvaNota(@NonNull MenuItem item) {
+        return item.getItemId() == R.id.menu_formulario_nota_ic_salva;
     }
 }
