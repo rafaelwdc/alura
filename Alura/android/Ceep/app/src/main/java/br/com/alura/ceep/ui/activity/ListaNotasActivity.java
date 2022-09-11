@@ -25,14 +25,19 @@ public class ListaNotasActivity extends AppCompatActivity {
         configuraRecyclerView(todasNotas);
 
         TextView botaoInsereNota = findViewById(R.id.lista_notas_insere_nota);
-        botaoInsereNota.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent iniciaFormularioNota = new Intent(ListaNotasActivity.this,
-                        FormularioNotaActivity.class);
-                startActivity(iniciaFormularioNota);
-            }
+        botaoInsereNota.setOnClickListener(view -> {
+            Intent iniciaFormularioNota = new Intent(ListaNotasActivity.this,
+                    FormularioNotaActivity.class);
+            startActivity(iniciaFormularioNota);
         });
+    }
+
+    @Override
+    protected void onResume() {
+        NotaDAO dao = new NotaDAO();
+        List<Nota> todasNotas = dao.todos();
+        configuraRecyclerView(todasNotas);
+        super.onResume();
     }
 
     private List<Nota> notasDeExemplo() {
