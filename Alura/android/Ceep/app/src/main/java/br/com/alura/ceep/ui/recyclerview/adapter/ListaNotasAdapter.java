@@ -1,7 +1,6 @@
 package br.com.alura.ceep.ui.recyclerview.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,26 +18,28 @@ public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.No
 
     private final List<Nota> notas;
     private final Context context;
-    private int quantidadeViewHolder = 0;
+    private OnItemClickListener onItemClickListener;
 
     public ListaNotasAdapter(Context context, List<Nota> notas) {
         this.context = context;
         this.notas = notas;
     }
 
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
     @NonNull
     @Override
-    public ListaNotasAdapter.NotaViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
-                                                               int viewType) {
-        quantidadeViewHolder++;
+    public NotaViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
+                                             int viewType) {
         View viewCriada = LayoutInflater.from(context)
                 .inflate(R.layout.item_nota, parent, false);
-        Log.i(" recyclerView adapter "," quantidade view holder: " + quantidadeViewHolder);
         return new NotaViewHolder(viewCriada);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListaNotasAdapter.NotaViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull NotaViewHolder holder, int position) {
         Nota nota = notas.get(position);
         holder.vincula(nota);
     }
@@ -58,6 +59,12 @@ public class ListaNotasAdapter extends RecyclerView.Adapter<ListaNotasAdapter.No
             super(itemView);
             titulo = itemView.findViewById(R.id.item_nota_titulo);
             descricao = itemView.findViewById(R.id.item_nota_descricao);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onItemClickListener.onItemClick();
+                }
+            });
         }
 
         public void vincula(Nota nota) {
