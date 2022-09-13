@@ -7,23 +7,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
-
-import java.io.Serializable;
-
 import br.com.alura.ceep.R;
 import br.com.alura.ceep.model.Nota;
 
 public class FormularioNotaActivity extends AppCompatActivity {
 
-    private int posicaoRecebida;
+    public static final int POSICAO_INVALIDA = -1;
+    public static final String CHAVE_POSICAO = "posicao";
+    private int posicaoRecebida = POSICAO_INVALIDA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +28,19 @@ public class FormularioNotaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_formulario_nota);
 
         Intent dadosRecebidos = getIntent();
-        if(dadosRecebidos.hasExtra(CHAVE_NOTA) && dadosRecebidos.hasExtra("posicao")) {
+        if (dadosRecebidos.hasExtra(CHAVE_NOTA)) {
             Nota notaRecebida = (Nota) dadosRecebidos
                     .getSerializableExtra(CHAVE_NOTA);
-            posicaoRecebida = dadosRecebidos.getIntExtra("posicao",-1);
-            TextView titulo = findViewById(R.id.formulario_nota_titulo);
-            titulo.setText(notaRecebida.getTitulo());
-            TextView descricao = findViewById(R.id.formulario_nota_descricao);
-            descricao.setText(notaRecebida.getDescricao());
+            posicaoRecebida = dadosRecebidos.getIntExtra(CHAVE_POSICAO, POSICAO_INVALIDA);
+            preencheCampos(notaRecebida);
         }
+    }
+
+    private void preencheCampos(Nota notaRecebida) {
+        TextView titulo = findViewById(R.id.formulario_nota_titulo);
+        titulo.setText(notaRecebida.getTitulo());
+        TextView descricao = findViewById(R.id.formulario_nota_descricao);
+        descricao.setText(notaRecebida.getDescricao());
     }
 
     @Override
@@ -61,7 +62,7 @@ public class FormularioNotaActivity extends AppCompatActivity {
     private void retornaNota(Nota nota) {
         Intent resultadoInsercao = new Intent();
         resultadoInsercao.putExtra(CHAVE_NOTA, nota);
-        resultadoInsercao.putExtra("posicao",posicaoRecebida);
+        resultadoInsercao.putExtra("posicao", posicaoRecebida);
         setResult(CODIGO_RESULTADO_NOTA_CRIADA, resultadoInsercao);
     }
 
