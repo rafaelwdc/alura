@@ -3,6 +3,8 @@ package br.com.alura.ceep.ui.activity;
 import static br.com.alura.ceep.ui.activity.NotaActivityConstantes.CHAVE_NOTA;
 import static br.com.alura.ceep.ui.activity.NotaActivityConstantes.CHAVE_POSICAO;
 import static br.com.alura.ceep.ui.activity.NotaActivityConstantes.POSICAO_INVALIDA;
+import static br.com.alura.ceep.ui.activity.NotaActivityConstantes.TITULO_APPBAR_ALTERA;
+import static br.com.alura.ceep.ui.activity.NotaActivityConstantes.TITULO_APPBAR_INSERE;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -28,10 +30,13 @@ public class FormularioNotaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_nota);
 
+        setTitle(TITULO_APPBAR_INSERE);
+
         inicializaCampos();
 
         Intent dadosRecebidos = getIntent();
         if (dadosRecebidos.hasExtra(CHAVE_NOTA)) {
+            setTitle(TITULO_APPBAR_ALTERA);
             Nota notaRecebida = (Nota) dadosRecebidos
                     .getSerializableExtra(CHAVE_NOTA);
             posicaoRecebida = dadosRecebidos.getIntExtra(CHAVE_POSICAO, POSICAO_INVALIDA);
