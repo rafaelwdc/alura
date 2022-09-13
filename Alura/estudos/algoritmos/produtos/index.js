@@ -16,16 +16,18 @@ let produto5 = new Produto("Fusca", 18000);
 let produtos = [produto1, produto2, produto3, produto4, produto5];
 
 let maisBarato = 0;
-for( let atual = 0 ; atual <= 4 ; atual++ ) {
-    if(produtos[atual].preco < produtos[maisBarato].preco) {
-        maisBarato = atual;
-    };
+for( let atual = 0 ; atual <= produtos.length ; atual++ ) {
+    carroMaisBarato(produtos,atual,maisBarato);
 };
 
 console.log(maisBarato);
 console.log(`O carro ${produtos[maisBarato].nome} é o mais barato e custa R$ ${produtos[maisBarato].preco}`);
 
-
+function carroMaisBarato(produtos,atual,maisBarato) {
+    if(produtos[atual].preco < produtos[maisBarato].preco) {
+        maisBarato = atual;
+    };
+};
 
 
 
