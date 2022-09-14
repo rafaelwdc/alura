@@ -12,7 +12,10 @@ import java.util.List;
 import br.com.alura.agenda.model.Aluno;
 
 public class AlunoDAOLowLevel extends SQLiteOpenHelper {
-    public AlunoDAOLowLevel(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public AlunoDAOLowLevel(Context context,
+                            String name,
+                            SQLiteDatabase.CursorFactory factory,
+                            int version) {
         super(context,name,factory,version);
     }
 
@@ -27,7 +30,7 @@ public class AlunoDAOLowLevel extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
@@ -78,7 +81,7 @@ public class AlunoDAOLowLevel extends SQLiteOpenHelper {
     public void remove(Aluno aluno) {
         SQLiteDatabase db = getWritableDatabase();
         String[] params = {String.valueOf(aluno.getId())};
-        db.delete("alunos","id",params);
+        db.delete("alunos","id=?",params);
     }
 
 
