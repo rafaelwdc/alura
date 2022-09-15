@@ -8,11 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.alura.agenda.R;
-import br.com.alura.agenda.dao.AlunoDAOLowLevel;
+import br.com.alura.agenda.database.AgendaDatabase;
+import br.com.alura.agenda.database.dao.AlunoDAO;
 import br.com.alura.agenda.model.Aluno;
 
 public class FormularioAlunoActivity extends AppCompatActivity {
@@ -22,11 +22,7 @@ public class FormularioAlunoActivity extends AppCompatActivity {
     private EditText campoNome;
     private EditText campoTelefone;
     private EditText campoEmail;
-    private final AlunoDAOLowLevel dao = new AlunoDAOLowLevel(
-            this,
-            "agenda",
-            null,
-            1);
+    private AlunoDAO dao;
     private Aluno aluno;
 
     @Override
@@ -34,20 +30,25 @@ public class FormularioAlunoActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_aluno);
+        AgendaDatabase database = AgendaDatabase.getInstance(this);
+        dao = database.getRoomAlunoDao();
         inicializacaoDosCampos();
         carregaAluno();
     }
 
     @Override
-    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_formulario_aluno_menu, menu);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater()
+                .inflate(R.menu.
+                                activity_formulario_aluno_menu,
+                        menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        if(itemId == R.id.activity_formulario_aluno_menu_salvar) {
+        if (itemId == R.id.activity_formulario_aluno_menu_salvar) {
             finalizaFormulario();
         }
         return super.onOptionsItemSelected(item);
@@ -55,7 +56,7 @@ public class FormularioAlunoActivity extends AppCompatActivity {
 
     private void carregaAluno() {
         Intent dados = getIntent();
-        if(dados.hasExtra(CHAVE_ALUNO)) {
+        if (dados.hasExtra(CHAVE_ALUNO)) {
             setTitle(TITULO_APPBAR_EDITA_ALUNO);
             aluno = (Aluno) dados.getSerializableExtra(CHAVE_ALUNO);
             preencheCampos();
@@ -73,7 +74,7 @@ public class FormularioAlunoActivity extends AppCompatActivity {
 
     private void finalizaFormulario() {
         preencheAluno();
-        if(aluno.temIdValido()) {
+        if (aluno.temIdValido()) {
             dao.edita(aluno);
         } else {
             dao.salva(aluno);

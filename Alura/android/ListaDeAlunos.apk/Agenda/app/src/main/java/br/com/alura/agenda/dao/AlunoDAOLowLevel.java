@@ -59,11 +59,11 @@ public class AlunoDAOLowLevel extends SQLiteOpenHelper {
 
         while (c.moveToNext()) {
             Aluno aluno = new Aluno();
-            aluno.setId(c.getInt(c.getColumnIndex("id")));
-            aluno.setNome(c.getString(c.getColumnIndex("nome")));
-            aluno.setTelefone(c.getString(c.getColumnIndex("telefone")));
-            aluno.setEmail(c.getString(c.getColumnIndex("email")));
-            aluno.add(aluno);
+//            aluno.setId(c.getInt(c.getColumnIndex("id")));
+//            aluno.setNome(c.getString(c.getColumnIndex("nome")));
+//            aluno.setTelefone(c.getString(c.getColumnIndex("telefone")));
+//            aluno.setEmail(c.getString(c.getColumnIndex("email")));
+//            aluno.add(aluno);
         }
         c.close();
         return alunos;

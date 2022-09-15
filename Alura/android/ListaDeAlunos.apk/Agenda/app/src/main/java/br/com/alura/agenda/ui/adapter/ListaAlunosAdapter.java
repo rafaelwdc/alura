@@ -44,11 +44,11 @@ public class ListaAlunosAdapter extends BaseAdapter {
         return viewCriada;
     }
 
-    private void vincula(View view, Aluno al) {
+    private void vincula(View view, Aluno aluno) {
         TextView nome = view.findViewById(R.id.item_aluno_nome);
-        nome.setText(al.getNome());
+        nome.setText(aluno.getNomeCompleto());
         TextView telefone = view.findViewById(R.id.item_aluno_telefone);
-        telefone.setText(al.getTelefone());
+        telefone.setText(aluno.getTelefone());
     }
 
     private View criaView(ViewGroup viewGroup) {
@@ -58,13 +58,13 @@ public class ListaAlunosAdapter extends BaseAdapter {
     }
 
     public void atualiza(List<Aluno> alunos) {
-        notifyDataSetChanged();
         this.alunos.clear();
         this.alunos.addAll(alunos);
+        notifyDataSetChanged();
     }
 
     public void remove(Aluno aluno) {
-        notifyDataSetChanged();
         alunos.remove(aluno);
+        notifyDataSetChanged();
     }
 }

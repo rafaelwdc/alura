@@ -24,7 +24,7 @@ public class AlunoDAO {
     }
 
     public void edita(Aluno aluno) {
-        Aluno alunoEncontrado = BuscaAlunoPeloId(aluno);
+        Aluno alunoEncontrado = buscaAlunoPeloId(aluno);
         if (alunoEncontrado != null) {
             int posicaoDoAluno = alunos.indexOf(alunoEncontrado);
             alunos.set(posicaoDoAluno, aluno);
@@ -32,7 +32,7 @@ public class AlunoDAO {
     }
 
     @Nullable
-    private Aluno BuscaAlunoPeloId(Aluno aluno) {
+    private Aluno buscaAlunoPeloId(Aluno aluno) {
         for (Aluno a :
                 alunos) {
             if (a.getId() == aluno.getId()) {
@@ -47,7 +47,7 @@ public class AlunoDAO {
     }
 
     public void remove(Aluno aluno) {
-        Aluno alunoDevolvido = BuscaAlunoPeloId(aluno);
+        Aluno alunoDevolvido = buscaAlunoPeloId(aluno);
         if (alunoDevolvido != null) {
             alunos.remove(alunoDevolvido);
         }

@@ -2,7 +2,6 @@ package br.com.alura.agenda.ui.activity;
 
 import static br.com.alura.agenda.ui.activity.ConstantesActivities.CHAVE_ALUNO;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -44,7 +43,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
     public boolean onContextItemSelected(final MenuItem item) {
 
         int itemId = item.getItemId();
-        if(itemId == R.id.activity_lista_alunos_menu_remover) {
+        if (itemId == R.id.activity_lista_alunos_menu_remover) {
             listaAlunoView.confirmaRemocao(item);
 
         }
@@ -68,22 +67,11 @@ public class ListaAlunosActivity extends AppCompatActivity {
 
     private void configuraLista() {
         ListView listaDeAlunos = findViewById(R.id.activity_lista_alunos_listview);
-//        final List<Aluno> alunos = dao.todos();
         listaAlunoView.configuraAdapter(listaDeAlunos);
         configuraListenerDeCliquePorItem(listaDeAlunos);
         registerForContextMenu(listaDeAlunos);
     }
 
-// --Commented out by Inspection START (04/09/2022 04:26):
-//    private void configuraListenerDeCliqueLongoPorItem(ListView listaDeAlunos) {
-//        listaDeAlunos.setOnItemLongClickListener((adapterView, view, posicao, id) -> {
-//            Aluno alunoEscolhido = (Aluno) adapterView.getItemAtPosition(posicao);
-//            dao.remove(alunoEscolhido);
-//            adapter.remove(alunoEscolhido);
-//            return false;
-//        });
-//    }
-// --Commented out by Inspection STOP (04/09/2022 04:26)
 
     private void configuraListenerDeCliquePorItem(ListView listaDeAlunos) {
         listaDeAlunos.setOnItemClickListener((adapterView, view, posicao, id) -> {

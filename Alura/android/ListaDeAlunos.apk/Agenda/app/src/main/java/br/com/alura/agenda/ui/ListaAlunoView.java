@@ -6,29 +6,22 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import androidx.room.Room;
-import androidx.room.RoomDatabase;
-
-import br.com.alura.agenda.dao.AlunoDAO;
-import br.com.alura.agenda.dao.AlunoDAOLowLevel;
 import br.com.alura.agenda.database.AgendaDatabase;
-import br.com.alura.agenda.database.dao.RoomAlunoDAO;
+import br.com.alura.agenda.database.dao.AlunoDAO;
 import br.com.alura.agenda.model.Aluno;
 import br.com.alura.agenda.ui.adapter.ListaAlunosAdapter;
 
 public class ListaAlunoView {
 
     private final ListaAlunosAdapter adapter;
-    private final RoomAlunoDAO dao;
+    private final AlunoDAO dao;
     private final Context context;
-
 
 
     public ListaAlunoView(Context context) {
         this.context = context;
         this.adapter = new ListaAlunosAdapter(this.context);
-        dao = Room.databaseBuilder(context, AgendaDatabase.class, "agenda.db")
-                .build()
+        dao = AgendaDatabase.getInstance(context)
                 .getRoomAlunoDao();
     }
 
