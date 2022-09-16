@@ -13,7 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import br.com.alura.agenda.R;
 import br.com.alura.agenda.database.AgendaDatabase;
 import br.com.alura.agenda.database.dao.AlunoDAO;
+import br.com.alura.agenda.database.dao.TelefoneDAO;
 import br.com.alura.agenda.model.Aluno;
+import br.com.alura.agenda.model.Telefone;
+import br.com.alura.agenda.model.TipoTelefone;
 
 public class FormularioAlunoActivity extends AppCompatActivity {
 
@@ -23,8 +26,9 @@ public class FormularioAlunoActivity extends AppCompatActivity {
     private EditText campoTelefoneFixo;
     private EditText campoTelefoneCelular;
     private EditText campoEmail;
-    private AlunoDAO dao;
+    private AlunoDAO alunoDAO;
     private Aluno aluno;
+    private TelefoneDAO telefoneDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,8 @@ public class FormularioAlunoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_aluno);
         AgendaDatabase database = AgendaDatabase.getInstance(this);
-        dao = database.getRoomAlunoDao();
+        alunoDAO = database.getRoomAlunoDao();
+        telefoneDAO = database.getTelefoneDAO();
         inicializacaoDosCampos();
         carregaAluno();
     }
@@ -77,9 +82,17 @@ public class FormularioAlunoActivity extends AppCompatActivity {
     private void finalizaFormulario() {
         preencheAluno();
         if (aluno.temIdValido()) {
-            dao.edita(aluno);
+            alunoDAO.edita(aluno);
         } else {
-            dao.salva(aluno);
+            int alunoId = alunoDAO.salva(aluno).intValue();
+
+            String numeroFixo = campoTelefoneFixo.getText().toString();
+            Telefone telefoneFixo = new Telefone(numeroFixo, TipoTelefone.FIXO, alunoId);
+
+            String numeroCelular = campoTelefoneCelular.getText().toString();
+            Telefone telefoneCelular = new Telefone(numeroCelular, TipoTelefone.CELULAR, alunoId);
+
+            telefoneDAO.salva(telefoneFixo, telefoneCelular);
         }
         finish();
     }

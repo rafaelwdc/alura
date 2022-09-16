@@ -20,15 +20,18 @@ public class Telefone {
             onDelete = CASCADE)
     private int alunoId;
 
+    public Telefone(String numero, TipoTelefone tipo, int alunoId) {
+        this.numero = numero;
+        this.tipo = tipo;
+        this.alunoId = alunoId;
+    }
+
     public int getAlunoId() {
         return alunoId;
     }
 
     public void setAlunoId(int alunoId) {
         this.alunoId = alunoId;
-    }
-
-    public Telefone() {
     }
 
     public int getId() {
