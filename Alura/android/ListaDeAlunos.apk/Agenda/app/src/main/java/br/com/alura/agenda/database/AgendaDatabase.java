@@ -4,13 +4,10 @@ import static br.com.alura.agenda.database.AgendaMigrations.TODAS_MIGRATIONS;
 
 import android.content.Context;
 
-import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
-import androidx.room.migration.Migration;
-import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import br.com.alura.agenda.database.converter.ConversorCalendar;
 import br.com.alura.agenda.database.converter.ConversorTipoTelefone;

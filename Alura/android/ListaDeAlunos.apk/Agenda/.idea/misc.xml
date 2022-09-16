@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/rafae/Documents/GitHub/alura/Alura/android/ListaDeAlunos.apk/Agenda/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/rafae/Documents/GitHub/alura/Alura/android/ListaDeAlunos.apk/Agenda/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/rafae/Documents/GitHub/alura/Alura/android/ListaDeAlunos.apk/Agenda/app/src/main/res/drawable/ic_launcher_icon_foreground.xml" value="0.1" />
         <entry key="..\:/Users/rafae/Documents/GitHub/alura/Alura/android/ListaDeAlunos.apk/Agenda/app/src/main/res/layout/activity_formulario_aluno.xml" value="0.2504528985507246" />
         <entry key="..\:/Users/rafae/Documents/GitHub/alura/Alura/android/ListaDeAlunos.apk/Agenda/app/src/main/res/layout/activity_lista_alunos.xml" value="0.1" />
         <entry key="..\:/Users/rafae/Documents/GitHub/alura/Alura/android/ListaDeAlunos.apk/Agenda/app/src/main/res/layout/item_aluno.xml" value="0.2504528985507246" />
