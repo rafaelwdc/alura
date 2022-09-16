@@ -8,4 +8,6 @@
     <string name="email">E-mail</string>
     <string name="remover">Remover</string>
     <string name="salvar_aluno">Salvar o Aluno</string>
+    <string name="telefone_fixo">Telefone fixo</string>
+    <string name="telefone_celular">Telefone celular</string>
 </resources>
