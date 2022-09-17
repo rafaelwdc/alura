@@ -1,7 +1,5 @@
 package br.com.alura.agenda.asynctask;
 
-import android.os.AsyncTask;
-
 import java.util.List;
 
 import br.com.alura.agenda.database.dao.AlunoDAO;
@@ -10,7 +8,7 @@ import br.com.alura.agenda.model.Aluno;
 import br.com.alura.agenda.model.Telefone;
 import br.com.alura.agenda.model.TipoTelefone;
 
-public class EditaAlunoTask extends AsyncTask<Void,Void,Void> {
+public class EditaAlunoTask extends BaseAlunoComTelefoneTask {
 
     private final AlunoDAO alunoDAO;
     private final Aluno aluno;
@@ -18,22 +16,21 @@ public class EditaAlunoTask extends AsyncTask<Void,Void,Void> {
     private final Telefone telefoneCelular;
     private final TelefoneDAO telefoneDAO;
     private final List<Telefone> telefonesDoAluno;
-    private final AlunoEditadoListener listener;
 
     public EditaAlunoTask(AlunoDAO alunoDAO,
                           Aluno aluno,
                           Telefone telefoneFixo,
                           Telefone telefoneCelular,
                           TelefoneDAO telefoneDAO,
-                          List<Telefone> telefonesDoAluno, AlunoEditadoListener listener) {
+                          List<Telefone> telefonesDoAluno, FinalizadaListener listener) {
 
+        super(listener);
         this.alunoDAO = alunoDAO;
         this.aluno = aluno;
         this.telefoneFixo = telefoneFixo;
         this.telefoneCelular = telefoneCelular;
         this.telefoneDAO = telefoneDAO;
         this.telefonesDoAluno = telefonesDoAluno;
-        this.listener = listener;
     }
 
     @Override
@@ -54,17 +51,6 @@ public class EditaAlunoTask extends AsyncTask<Void,Void,Void> {
                 telefoneCelular.setId(telefone.getId());
             }
         }
-    }
-
-    private void vinculaAlunoComTelefone(int alunoId, Telefone... telefones) {
-        for (Telefone telefone :
-                telefones) {
-            telefone.setAlunoId(alunoId);
-        }
-    }
-
-    public interface AlunoEditadoListener {
-        void quandoEditado();
     }
 
 }
