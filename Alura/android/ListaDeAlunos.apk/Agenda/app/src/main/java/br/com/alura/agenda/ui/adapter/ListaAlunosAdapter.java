@@ -54,10 +54,10 @@ public class ListaAlunosAdapter extends BaseAdapter {
         TextView nome = view.findViewById(R.id.item_aluno_nome);
         nome.setText(aluno.getNome());
         TextView telefone = view.findViewById(R.id.item_aluno_telefone);
-        Telefone primeiroTelefone = dao.buscaPrimeiroTelefoneDoAluno(aluno.getId());
-        if(primeiroTelefone != null) {
-            telefone.setText(primeiroTelefone.getNumero());
-        }
+//        Telefone primeiroTelefone = dao.buscaPrimeiroTelefoneDoAluno(aluno.getId());
+//        if(primeiroTelefone != null) {
+//            telefone.setText(primeiroTelefone.getNumero());
+//        }
     }
 
     private View criaView(ViewGroup viewGroup) {
