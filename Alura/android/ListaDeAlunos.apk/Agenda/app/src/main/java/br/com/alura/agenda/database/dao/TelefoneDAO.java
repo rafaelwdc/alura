@@ -2,7 +2,9 @@ package br.com.alura.agenda.database.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -19,5 +21,8 @@ public interface TelefoneDAO {
 
     @Query("SELECT * FROM Telefone " +
             "WHERE alunoId = :alunoId")
-    List<Telefone> buscaTodosTelefoneDoAluno(int alunoId);
+    List<Telefone> buscaTodosTelefonesDoAluno(int alunoId);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void atualiza(Telefone... telefones);
 }
