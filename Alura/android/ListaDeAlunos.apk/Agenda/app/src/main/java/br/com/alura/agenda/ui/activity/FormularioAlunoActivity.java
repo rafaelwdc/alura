@@ -14,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
 import br.com.alura.agenda.R;
-import br.com.alura.agenda.asynctask.BuscaTodosTelefonesDoAluno;
+import br.com.alura.agenda.asynctask.BuscaTodosTelefonesDoAlunoTask;
+import br.com.alura.agenda.asynctask.EditaAlunoTask;
 import br.com.alura.agenda.asynctask.SalvaAlunoTask;
 import br.com.alura.agenda.database.AgendaDatabase;
 import br.com.alura.agenda.database.dao.AlunoDAO;
@@ -86,7 +87,7 @@ public class FormularioAlunoActivity extends AppCompatActivity {
     }
 
     private void preencheCamposDeTelefone() {
-        new BuscaTodosTelefonesDoAluno(telefoneDAO, aluno, telefones -> {
+        new BuscaTodosTelefonesDoAlunoTask(telefoneDAO, aluno, telefones -> {
             this.telefonesDoAluno = telefones;
             for (Telefone telefone :
                     telefonesDoAluno) {
@@ -129,28 +130,14 @@ public class FormularioAlunoActivity extends AppCompatActivity {
     }
 
     private void editaAluno(Telefone telefoneFixo, Telefone telefoneCelular) {
-        alunoDAO.edita(aluno);
-        vinculaAlunoComTelefone(aluno.getId(), telefoneFixo, telefoneCelular);
-        atualizaIdsDosTelefones(telefoneFixo, telefoneCelular);
-        telefoneDAO.atualiza(telefoneFixo, telefoneCelular);
-    }
-
-    private void atualizaIdsDosTelefones(Telefone telefoneFixo, Telefone telefoneCelular) {
-        for (Telefone telefone :
-                telefonesDoAluno) {
-            if (telefone.getTipo() == TipoTelefone.FIXO) {
-                telefoneFixo.setId(telefone.getId());
-            } else {
-                telefoneCelular.setId(telefone.getId());
-            }
-        }
-    }
-
-    private void vinculaAlunoComTelefone(int alunoId, Telefone... telefones) {
-        for (Telefone telefone :
-                telefones) {
-            telefone.setAlunoId(alunoId);
-        }
+        new EditaAlunoTask(alunoDAO,
+                aluno,
+                telefoneFixo,
+                telefoneCelular,
+                telefoneDAO,
+                telefonesDoAluno,
+                this::finish)
+                .execute();
     }
 
     private void inicializacaoDosCampos() {
