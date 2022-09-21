@@ -11,14 +11,19 @@ import br.com.alura.estoque.model.Produto;
 import br.com.alura.estoque.retrofit.EstoqueRetrofit;
 import br.com.alura.estoque.retrofit.service.ProdutoService;
 import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.internal.EverythingIsNonNull;
 
 public class ProdutoRepository {
 
     private final ProdutoDAO dao;
+    private final ProdutoService service;
 
     public ProdutoRepository(ProdutoDAO dao) {
         this.dao = dao;
+        service = new EstoqueRetrofit().getProdutoService();
+
     }
 
     public void buscaProdutos(DadosCarregadosListener<List<Produto>> listener) {
@@ -35,17 +40,46 @@ public class ProdutoRepository {
 
 
     public void salva(Produto produto,
-                      DadosCarregadosListener<Produto> listener) {
+                      DadosCarregadosCallback<Produto> callback) {
+        salvaNaApi(produto, callback);
+    }
+
+    private void salvaNaApi(Produto produto,
+                            DadosCarregadosCallback<Produto> callback) {
+        Call<Produto> call = service.salva(produto);
+        call.enqueue(new Callback<Produto>() {
+            @Override
+            @EverythingIsNonNull
+            public void onResponse(Call<Produto> call,
+                                   Response<Produto> response) {
+                if(response.isSuccessful()){
+                    Produto produtoSalvo = response.body();
+                    if(produtoSalvo != null) {
+                        salvaInterno(produtoSalvo, callback);
+                    }
+                } else {
+                    callback.quandoFalha("Resposta não sucedida");
+                }
+            }
+
+            @EverythingIsNonNull
+            @Override
+            public void onFailure(Call<Produto> call, Throwable t) {
+                callback.quandoFalha("Falha de comunicação: " + t.getMessage());
+            }
+        });
+    }
+
+    private void salvaInterno(Produto produto,
+                              DadosCarregadosCallback<Produto> callback) {
         new BaseAsyncTask<>(() -> {
             long id = dao.salva(produto);
             return dao.buscaProduto(id);
-        }, produtoSalvo ->
-                listener.quandoCarregados(produtoSalvo))
+        }, callback::quandoSucesso)
                 .execute();
     }
 
     private void buscaProdutosNaApi(DadosCarregadosListener<List<Produto>> listener) {
-        ProdutoService service = new EstoqueRetrofit().getProdutoService();
         Call<List<Produto>> call = service.buscaTodos();
         new BaseAsyncTask<>(() -> {
             try {
@@ -64,4 +98,8 @@ public class ProdutoRepository {
         void quandoCarregados(T resultados);
     }
 
+    public interface DadosCarregadosCallback <T> {
+        void quandoSucesso(T resultado);
+        void quandoFalha(String erro);
+    }
 }
