@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1794b163-296a-4c8e-832e-a4a01b464f43" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.4.2/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/database/EstoqueDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/database/EstoqueDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/database/converter/BigDecimalConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/database/converter/BigDecimalConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/repository/ProdutoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/retrofit/EstoqueRetrofit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/retrofit/EstoqueRetrofit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/retrofit/callback/CallbackComRetorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/retrofit/callback/CallbackComRetorno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/retrofit/callback/CallbackSemRetorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/retrofit/callback/CallbackSemRetorno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/ui/activity/ListaProdutosActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../android/Estoque/app/src/main/java/br/com/alura/estoque/ui/activity/ListaProdutosActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../servidor/database/main/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/../../../servidor/database/main/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../servidor/database/main/db.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../servidor/database/main/db.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../servidor/database/main/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../servidor/database/main/db.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F7PvCsZPkOZ2eA36rvjoL3xDUX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="bytebank.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="kotlin001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="kotlin001" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1794b163-296a-4c8e-832e-a4a01b464f43" name="Changes" comment="" />
+      <created>1663840378445</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663840378445</updated>
+    </task>
+    <servers />
+  </component>
+</project>

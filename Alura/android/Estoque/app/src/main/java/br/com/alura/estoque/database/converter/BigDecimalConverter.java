@@ -1,8 +1,8 @@
 package br.com.alura.estoque.database.converter;
 
-import java.math.BigDecimal;
-
 import androidx.room.TypeConverter;
+
+import java.math.BigDecimal;
 
 public class BigDecimalConverter {
 
