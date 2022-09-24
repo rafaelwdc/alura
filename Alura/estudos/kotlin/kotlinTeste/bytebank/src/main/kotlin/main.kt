@@ -1,15 +1,15 @@
 fun main() {
     println("Bem Vindo ao ByteBank")
 
-    // Conta Rafael
-    val contaRafael = Conta("Rafael", 1000)
+    // Conta Rafael -> Ao instanciar um objeto ja declarar suas propriedades como parâmetro junto dos valores;
+    val contaRafael = Conta(titular = "Rafael", numero =1000)
     contaRafael.deposita(200.0)
 
-    // Conta Patricky
-    val contaPatricky = Conta("Patricky", 1001)
+    // Conta Patricky;
+    val contaPatricky = Conta(titular = "Patricky", numero = 1001)
     contaPatricky.deposita(300.0)
 
-    // Prints
+    // Prints;
     println(contaRafael.titular)
     println(contaRafael.numero)
     println(contaRafael.saldo)
@@ -18,7 +18,7 @@ fun main() {
     println(contaPatricky.numero)
     println(contaPatricky.saldo)
 
-    // Comportamentos / Metodos
+    // Comportamentos / Metodos;
     println("Depositando na conta do ${contaRafael.titular}")
     contaRafael.deposita(50.0)
     println(contaRafael.saldo)
@@ -57,15 +57,15 @@ fun main() {
 
 }
 
-// Classe no Kotlin -> Declara as propertys e o construtor como parâmetro direto na Classe em sua criação
+// Classe no Kotlin -> Declara as propertys e o construtor como parâmetro direto na Classe em sua criação;
 class Conta(
-    var titular: String,
-    var numero: Int
+    val titular: String,
+    val numero: Int
 ) {
     var saldo = 0.0
-        private set // <- Encapsulamento
+        private set // <- Encapsulamento;
 
-    // Comportamentos da Classe
+    // Comportamentos da Classe;
     fun deposita(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
