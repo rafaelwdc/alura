@@ -7,7 +7,6 @@ fun main() {
     contaRafael.numero = 1000
     contaRafael.saldo = 200.0
 
-
     // Conta Patricky
     val contaPatricky = Conta()
     contaPatricky.titular = "Patricky"
@@ -23,27 +22,53 @@ fun main() {
     println(contaPatricky.numero)
     println(contaPatricky.saldo)
 
-    println("Depositando na conta do Rafael")
-    deposita(contaRafael, 50.0)
+    // Comportamentos / Metodos
+    println("Depositando na conta do ${contaRafael.titular}")
+    contaRafael.deposita(50.0)
     println(contaRafael.saldo)
-    println("Depositando na conta do Patricky")
-    deposita(contaPatricky,70.0)
+    println("Depositando na conta do ${contaPatricky.titular}")
+    contaPatricky.deposita(70.0)
     println(contaPatricky.saldo)
 
+    println("Sacando da conta do ${contaRafael.titular}")
+    contaRafael.saca(250.0)
+    println(contaRafael.saldo)
+
+    println("Sacando da conta do ${contaPatricky.titular}")
+    contaPatricky.saca(100.0)
+    println(contaPatricky.saldo)
+
+
+    println("Saque em Excesso na conta nº: ${contaRafael.numero} do titular: ${contaRafael.titular}")
+    contaRafael.saca(100.0)
+    println(contaRafael.saldo)
+
+    println("Saque em Excesso na conta nº: ${contaPatricky.numero} do titular:  ${contaPatricky.titular} ")
+    contaRafael.saca(500.0)
+    println(contaRafael.saldo)
+
+
+
 }
-
-fun deposita(conta: Conta, valor: Double) {
-    conta.saldo += valor
-}
-
-
-
-
 
 class Conta {
+
+    // Atributos da Classe
     var titular = ""
     var numero = 0
     var saldo = 0.0
+
+    // Comportamentos da Classe
+    fun deposita(valor: Double) {
+       this.saldo += valor
+    }
+
+    fun saca(valor: Double) {
+        if(this.saldo >= valor) {
+            saldo -= valor
+        }
+    }
+
 }
 
 fun testaCopiasEReferencias() {
@@ -65,7 +90,7 @@ fun testaCopiasEReferencias() {
 
 fun testaLacos() {
     var i = 0
-    while (i  <  5) {
+    while (i < 5) {
         val titular: String = "Rafael $i"
         val numerConta: Int = 1000 + i
         var saldo = i + 10.0
@@ -102,7 +127,6 @@ fun testaCondicoes(saldo: Double) {
     }
 
 }
-
 
 
 //    when {
