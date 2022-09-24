@@ -39,14 +39,24 @@ fun main() {
     println(contaPatricky.saldo)
 
 
-    println("Saque em Excesso na conta nº: ${contaRafael.numero} do titular: ${contaRafael.titular}")
+    println("Saque em Excesso na conta do titular: ${contaRafael.titular}")
     contaRafael.saca(100.0)
     println(contaRafael.saldo)
 
-    println("Saque em Excesso na conta nº: ${contaPatricky.numero} do titular:  ${contaPatricky.titular} ")
+    println("Saque em Excesso na conta do titular:  ${contaPatricky.titular} ")
     contaRafael.saca(500.0)
     println(contaRafael.saldo)
 
+    println("Trasnferencia da conta de ${contaPatricky.titular} para a conta de ${contaRafael.titular}")
+
+    if(contaPatricky.transfere(300.0,contaRafael)) {
+        println("Transferência sucessedida")
+    } else {
+        println("Falha na TransferÊncia")
+    }
+
+    println("Saldo da conta do ${contaRafael.titular}:  ${contaRafael.saldo} ")
+    println("Saldo da conta do ${contaPatricky.titular}:  ${contaPatricky.saldo} ")
 
 
 }
@@ -60,15 +70,23 @@ class Conta {
 
     // Comportamentos da Classe
     fun deposita(valor: Double) {
-       this.saldo += valor
+        this.saldo += valor
     }
 
     fun saca(valor: Double) {
-        if(this.saldo >= valor) {
+        if (this.saldo >= valor) {
             saldo -= valor
         }
     }
 
+    fun transfere(valor: Double, destino: Conta): Boolean {
+        if (saldo >= valor) {
+            saldo -= valor
+            destino.saldo += valor
+            return true
+        }
+        return false
+    }
 }
 
 fun testaCopiasEReferencias() {
