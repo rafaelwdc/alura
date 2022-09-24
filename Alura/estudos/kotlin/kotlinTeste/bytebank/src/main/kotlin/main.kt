@@ -23,6 +23,30 @@ fun main() {
     println(contaPatricky.numero)
     println(contaPatricky.saldo)
 
+    println("Depositando na conta do Rafael")
+    deposita(contaRafael, 50.0)
+    println(contaRafael.saldo)
+    println("Depositando na conta do Patricky")
+    deposita(contaPatricky,70.0)
+    println(contaPatricky.saldo)
+
+}
+
+fun deposita(conta: Conta, valor: Double) {
+    conta.saldo += valor
+}
+
+
+
+
+
+class Conta {
+    var titular = ""
+    var numero = 0
+    var saldo = 0.0
+}
+
+fun testaCopiasEReferencias() {
     val numeroX = 10
     var numeroY = numeroX
     numeroY++
@@ -32,17 +56,11 @@ fun main() {
 
     val contaCamila = Conta()
     contaCamila.titular = "Camila"
-    var contaHirode = contaCamila
+    var contaHirode = Conta()
+    contaHirode.titular = "Hirodd"
 
     println("Titular conta Camila: ${contaCamila.titular}")
-
-
-}
-
-class Conta {
-    var titular = ""
-    var numero = 0
-    var saldo = 0.0
+    println("Titular conta Hirode: ${contaHirode.titular}")
 }
 
 fun testaLacos() {
