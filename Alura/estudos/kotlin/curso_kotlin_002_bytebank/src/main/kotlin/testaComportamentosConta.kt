@@ -43,7 +43,7 @@ fun testaComportamentosConta() {
 
     println("Transferencia da conta de ${contaPatricky.titular} para a conta de ${contaRafael.titular}")
 
-    if (contaPatricky.transfere(300.0, contaRafael)) {
+    if (contaPatricky.transfere(100.0, contaRafael)) {
         println("Transferência sucessedida")
     } else {
         println("Falha na TransferÊncia")
