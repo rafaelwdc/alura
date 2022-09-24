@@ -2,15 +2,11 @@ fun main() {
     println("Bem Vindo ao ByteBank")
 
     // Conta Rafael
-    val contaRafael = Conta()
-    contaRafael.titular = "Rafael"
-    contaRafael.numero = 1000
+    val contaRafael = Conta("Rafael", 1000)
     contaRafael.deposita(200.0)
 
     // Conta Patricky
-    val contaPatricky = Conta()
-    contaPatricky.titular = "Patricky"
-    contaPatricky.numero = 1001
+    val contaPatricky = Conta("Patricky", 1001)
     contaPatricky.deposita(300.0)
 
     // Prints
@@ -49,7 +45,7 @@ fun main() {
 
     println("Transferencia da conta de ${contaPatricky.titular} para a conta de ${contaRafael.titular}")
 
-    if(contaPatricky.transfere(300.0,contaRafael)) {
+    if (contaPatricky.transfere(300.0, contaRafael)) {
         println("Transferência sucessedida")
     } else {
         println("Falha na TransferÊncia")
@@ -61,13 +57,13 @@ fun main() {
 
 }
 
-class Conta {
-
-    // Atributos da Classe
-    var titular = ""
-    var numero = 0
+// Classe no Kotlin -> Declara as propertys e o construtor como parâmetro direto na Classe em sua criação
+class Conta(
+    var titular: String,
+    var numero: Int
+) {
     var saldo = 0.0
-        private set
+        private set // <- Encapsulamento
 
     // Comportamentos da Classe
     fun deposita(valor: Double) {
@@ -90,9 +86,8 @@ class Conta {
         }
         return false
     }
-
-
 }
+
 
 fun testaCopiasEReferencias() {
     val numeroX = 10
@@ -102,10 +97,8 @@ fun testaCopiasEReferencias() {
     println("NumeroX $numeroX")
     println("NumeroY $numeroY")
 
-    val contaCamila = Conta()
-    contaCamila.titular = "Camila"
-    var contaHirode = Conta()
-    contaHirode.titular = "Hirodd"
+    val contaCamila = Conta("Camila", 1002)
+    var contaHirode = Conta("Hirodd", 1003)
 
     println("Titular conta Camila: ${contaCamila.titular}")
     println("Titular conta Hirode: ${contaHirode.titular}")
