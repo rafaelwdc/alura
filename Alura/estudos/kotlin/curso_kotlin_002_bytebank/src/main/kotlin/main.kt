@@ -26,26 +26,23 @@ fun main() {
     println("Nome: ${rafaelFuncionario.nome}")
     println("CPF: ${rafaelFuncionario.cpf}")
     println("Salário: ${rafaelFuncionario.salario}")
-    println("Bonificação: ${rafaelFuncionario.bonificacao}")
-    println("Salário c/ Bonificação: ${rafaelFuncionario.salario + rafaelFuncionario.bonificacao}")
+    println("Salario com Bonificação: ${rafaelFuncionario.bonificacao}")
 
     println()
 
     println("Nome: ${patrickyGerente.nome}")
     println("CPF: ${patrickyGerente.cpf}")
     println("Salário: ${patrickyGerente.salario}")
-    println("Bonificação: ${patrickyGerente.bonificacao}")
-    println("Salário c/ Bonificação: ${patrickyGerente.salario + patrickyGerente.bonificacao}")
+    println("Salário: ${patrickyGerente.bonificacao}")
 
     println()
 
     println("Nome: ${juinhaChefao.nome}")
     println("CPF: ${juinhaChefao.cpf}")
     println("Salário: ${juinhaChefao.salario}")
-    println("Bonificação: ${juinhaChefao.bonificacao}")
-    println("Salário c/ Bonificação: ${juinhaChefao.salario + juinhaChefao.bonificacao}")
-    println("Salário c/ Bonificação + Participação de Lucros: ${juinhaChefao.salario + juinhaChefao.bonificacao + juinhaChefao.plr}")
+    println("Salário: ${juinhaChefao.bonificacao}")
 
+    println()
 
     if(juinhaChefao.autentica(4321)) {
         println("Senha autenticada com sucesso")
