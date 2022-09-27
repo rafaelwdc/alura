@@ -20,7 +20,20 @@ fun main() {
         senha = 4321,
         plr = 750.0
     )
+    val hiroAnalista = Analista(
+        nome = "Hirode",
+        cpf = "846.987.654-54",
+        salario = 3000.0
+    )
 
+    val calculadora = CalculadoraBonificacao()
+    calculadora.registra(rafaelFuncionario)
+    calculadora.registra(patrickyGerente)
+    calculadora.registra(juinhaChefao)
+    calculadora.registra(hiroAnalista)
+
+    println()
+    println("# Criando Conta Funcionario #")
     println()
 
     println("Nome: ${rafaelFuncionario.nome}")
@@ -29,31 +42,43 @@ fun main() {
     println("Salario com Bonificação: ${rafaelFuncionario.bonificacao}")
 
     println()
+    println("# Criando Conta Gerente #")
+    println()
 
     println("Nome: ${patrickyGerente.nome}")
     println("CPF: ${patrickyGerente.cpf}")
     println("Salário: ${patrickyGerente.salario}")
-    println("Salário: ${patrickyGerente.bonificacao}")
+    println("Salario com Bonificação: ${patrickyGerente.bonificacao}")
 
+    println()
+    println("# Criando Conta Diretor #")
     println()
 
     println("Nome: ${juinhaChefao.nome}")
     println("CPF: ${juinhaChefao.cpf}")
     println("Salário: ${juinhaChefao.salario}")
-    println("Salário: ${juinhaChefao.bonificacao}")
+    println("Salario com Bonificação: ${juinhaChefao.bonificacao}")
 
     println()
+    println("# Autenticando Senhas #")
+    println()
 
-    if(juinhaChefao.autentica(4321)) {
+    if (juinhaChefao.autentica(4321)) {
         println("Senha autenticada com sucesso")
     } else {
         println("Falha na autenticação da senha")
     }
 
-    if(patrickyGerente.autentica(1234)) {
+    if (patrickyGerente.autentica(1234)) {
         println("Senha autenticada com sucesso")
     } else {
         println("Falha na autenticação da senha")
     }
+
+    println()
+    println("# Usando Calculadora #")
+    println()
+
+    println("Total de bonificação: ${calculadora.total}")
 
 }
