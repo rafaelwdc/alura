@@ -1,10 +1,10 @@
 fun testaComportamentosConta() {
     // Conta Rafael -> Ao instanciar um objeto ja declarar suas propriedades como parâmetro junto dos valores;
-    val contaRafael = Conta(titular = "Rafael", numero = 1000)
+    val contaRafael = ContaCorrente(titular = "Rafael", numero = 1000)
     contaRafael.deposita(200.0)
 
     // Conta Patricky;
-    val contaPatricky = Conta(titular = "Patricky", numero = 1001)
+    val contaPatricky = ContaPoupanca(titular = "Patricky", numero = 1001)
     contaPatricky.deposita(300.0)
 
     // Prints;

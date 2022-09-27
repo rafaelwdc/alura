@@ -34,7 +34,7 @@ fun testaFuncionarios() {
     calculadora.registra(hiro)
 
     println()
-    println("# Criando Conta Funcionario #")
+    println("# Criando Conta Auxiliar #")
     println()
 
     println("Nome: ${tela.nome}")
