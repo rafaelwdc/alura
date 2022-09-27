@@ -1,6 +1,6 @@
 fun testaFuncionarios() {
 
-    val tela = Analista(
+    val tela = Auxiliar(
         nome = "Steela",
         cpf = "898.456.321.59",
         salario = 1000.0
