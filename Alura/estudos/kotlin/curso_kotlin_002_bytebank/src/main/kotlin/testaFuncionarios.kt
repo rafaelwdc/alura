@@ -1,73 +1,85 @@
 fun testaFuncionarios() {
-    val rafaelFuncionario = Funcionario(
-        nome = "Rafael",
+
+    val tela = Analista(
+        nome = "Steela",
         cpf = "898.456.321.59",
         salario = 1000.0
     )
 
-    val patrickyGerente = Gerente(
-        nome = "Patricky",
+    val debler = Gerente(
+        nome = "Debrer",
         cpf = "842.987.654-59",
         salario = 2000.0,
         senha = 1234
     )
-    val juinhaChefao = Diretor(
+
+    val juinha = Diretor(
         nome = "Eduarda Monica",
         cpf = "987.654.321-89",
         salario = 4000.0,
         senha = 4321,
         plr = 750.0
     )
-    val hiroAnalista = Analista(
+
+    val hiro = Analista(
         nome = "Hirode",
         cpf = "846.987.654-54",
         salario = 3000.0
     )
 
     val calculadora = CalculadoraBonificacao()
-    calculadora.registra(rafaelFuncionario)
-    calculadora.registra(patrickyGerente)
-    calculadora.registra(juinhaChefao)
-    calculadora.registra(hiroAnalista)
+    calculadora.registra(tela)
+    calculadora.registra(debler)
+    calculadora.registra(juinha)
+    calculadora.registra(hiro)
 
     println()
     println("# Criando Conta Funcionario #")
     println()
 
-    println("Nome: ${rafaelFuncionario.nome}")
-    println("CPF: ${rafaelFuncionario.cpf}")
-    println("Salário: ${rafaelFuncionario.salario}")
-    println("Salario com Bonificação: ${rafaelFuncionario.bonificacao}")
+    println("Nome: ${tela.nome}")
+    println("CPF: ${tela.cpf}")
+    println("Salário: ${tela.salario}")
+    println("Salario com Bonificação: ${tela.bonificacao}")
 
     println()
     println("# Criando Conta Gerente #")
     println()
 
-    println("Nome: ${patrickyGerente.nome}")
-    println("CPF: ${patrickyGerente.cpf}")
-    println("Salário: ${patrickyGerente.salario}")
-    println("Salario com Bonificação: ${patrickyGerente.bonificacao}")
+    println("Nome: ${debler.nome}")
+    println("CPF: ${debler.cpf}")
+    println("Salário: ${debler.salario}")
+    println("Salario com Bonificação: ${debler.bonificacao}")
 
     println()
     println("# Criando Conta Diretor #")
     println()
 
-    println("Nome: ${juinhaChefao.nome}")
-    println("CPF: ${juinhaChefao.cpf}")
-    println("Salário: ${juinhaChefao.salario}")
-    println("Salario com Bonificação: ${juinhaChefao.bonificacao}")
+    println("Nome: ${juinha.nome}")
+    println("CPF: ${juinha.cpf}")
+    println("Salário: ${juinha.salario}")
+    println("Salario com Bonificação: ${juinha.bonificacao}")
+
+    println()
+    println("# Criando Conta Analista #")
+    println()
+
+    println("Nome: ${hiro.nome}")
+    println("CPF: ${hiro.cpf}")
+    println("Salário: ${hiro.salario}")
+    println("Salario com Bonificação: ${hiro.bonificacao}")
 
     println()
     println("# Autenticando Senhas #")
     println()
 
-    if (juinhaChefao.autentica(4321)) {
+    if (juinha.autentica(4321)) {
         println("Senha autenticada com sucesso")
     } else {
         println("Falha na autenticação da senha")
     }
 
-    if (patrickyGerente.autentica(1234)) {
+    if (debler.autentica(1234)) {
         println("Senha autenticada com sucesso")
     } else {
         println("Falha na autenticação da senha")
