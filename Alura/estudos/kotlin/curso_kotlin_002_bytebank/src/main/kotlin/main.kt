@@ -1,84 +1,41 @@
 fun main() {
     println("Bem Vindo ao ByteBank")
+    println()
 
-    val rafaelFuncionario = Funcionario(
-        nome = "Rafael",
-        cpf = "898.456.321.59",
-        salario = 1000.0
+    val contaCorrente: Conta = ContaCorrente(
+        titular = "Rafael",
+        numero = 1000
+        ) 
+    val contaPoupanca: Conta = ContaPoupanca(
+        titular = "Patricky",
+        numero = 1001
     )
 
-    val patrickyGerente = Gerente(
-        nome = "Patricky",
-        cpf = "842.987.654-59",
-        salario = 2000.0,
-        senha = 1234
-    )
-    val juinhaChefao = Diretor(
-        nome = "Eduarda Monica",
-        cpf = "987.654.321-89",
-        salario = 4000.0,
-        senha = 4321,
-        plr = 750.0
-    )
-    val hiroAnalista = Analista(
-        nome = "Hirode",
-        cpf = "846.987.654-54",
-        salario = 3000.0
-    )
+    contaCorrente.deposita(1000.0)
+    contaPoupanca.deposita(1000.0)
 
-    val calculadora = CalculadoraBonificacao()
-    calculadora.registra(rafaelFuncionario)
-    calculadora.registra(patrickyGerente)
-    calculadora.registra(juinhaChefao)
-    calculadora.registra(hiroAnalista)
-
-    println()
-    println("# Criando Conta Funcionario #")
+    println("Saldo Conta Poupança: ${contaPoupanca.saldo}")
+    println("Saldo Conta Corrente: ${contaCorrente.saldo}")
     println()
 
-    println("Nome: ${rafaelFuncionario.nome}")
-    println("CPF: ${rafaelFuncionario.cpf}")
-    println("Salário: ${rafaelFuncionario.salario}")
-    println("Salario com Bonificação: ${rafaelFuncionario.bonificacao}")
+    contaCorrente.saca(100.0)
+    contaPoupanca.saca(100.0)
 
-    println()
-    println("# Criando Conta Gerente #")
+    println("Saldo Conta Poupança após Saque: ${contaPoupanca.saldo}")
+    println("Saldo Conta Corrente após Saque: ${contaCorrente.saldo}")
     println()
 
-    println("Nome: ${patrickyGerente.nome}")
-    println("CPF: ${patrickyGerente.cpf}")
-    println("Salário: ${patrickyGerente.salario}")
-    println("Salario com Bonificação: ${patrickyGerente.bonificacao}")
+    contaPoupanca.transfere(100.0, contaCorrente)
 
-    println()
-    println("# Criando Conta Diretor #")
+    println("Saldo Conta Poupança após enviar Transferência: ${contaPoupanca.saldo}")
+    println("Saldo Conta Corrente após receber Transferência: ${contaCorrente.saldo}")
     println()
 
-    println("Nome: ${juinhaChefao.nome}")
-    println("CPF: ${juinhaChefao.cpf}")
-    println("Salário: ${juinhaChefao.salario}")
-    println("Salario com Bonificação: ${juinhaChefao.bonificacao}")
+    contaCorrente.transfere(100.0, contaPoupanca)
 
+    println("Saldo Conta Poupança após receber Transferência: ${contaPoupanca.saldo}")
+    println("Saldo Conta Corrente após enviar Transferência: ${contaCorrente.saldo}")
     println()
-    println("# Autenticando Senhas #")
-    println()
-
-    if (juinhaChefao.autentica(4321)) {
-        println("Senha autenticada com sucesso")
-    } else {
-        println("Falha na autenticação da senha")
-    }
-
-    if (patrickyGerente.autentica(1234)) {
-        println("Senha autenticada com sucesso")
-    } else {
-        println("Falha na autenticação da senha")
-    }
-
-    println()
-    println("# Usando Calculadora #")
-    println()
-
-    println("Total de bonificação: ${calculadora.total}")
 
 }
+
