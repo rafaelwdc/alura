@@ -7,7 +7,7 @@ open class Gerente(
     nome = nome,
     cpf = cpf,
     salario = salario,
-    senha = 3421
+    senha = senha
 ) {
 
     override val bonificacao: Double

@@ -8,7 +8,7 @@ open class Diretor(
     nome = nome,
     cpf = cpf,
     salario = salario,
-    senha = 2134
+    senha = senha
 ) {
     override val bonificacao: Double
     get() {

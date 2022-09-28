@@ -6,7 +6,6 @@ class SistemaInterno {
         } else {
             println("Falha na autenticação")
         }
-
     }
 
 }
