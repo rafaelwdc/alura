@@ -9,7 +9,7 @@ open class Diretor(
     cpf = cpf,
     salario = salario,
     senha = senha
-) {
+), Autenticavel {
     override val bonificacao: Double
     get() {
         return salario + plr
