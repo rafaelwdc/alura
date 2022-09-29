@@ -36,7 +36,7 @@ fun testaFuncionarios() {
     calculadora.registra(hiro)
 
     println()
-    println("# Criando modelo.Conta modelo.Auxiliar #")
+    println("# Criando Auxiliar #")
     println()
 
     println("Nome: ${tela.nome}")
@@ -45,7 +45,7 @@ fun testaFuncionarios() {
     println("Salario com Bonificação: ${tela.bonificacao}")
 
     println()
-    println("# Criando modelo.Conta modelo.Gerente #")
+    println("# Criando Gerente #")
     println()
 
     println("Nome: ${debler.nome}")
@@ -54,7 +54,7 @@ fun testaFuncionarios() {
     println("Salario com Bonificação: ${debler.bonificacao}")
 
     println()
-    println("# Criando modelo.Conta modelo.Diretor #")
+    println("# Criando Diretor #")
     println()
 
     println("Nome: ${juinha.nome}")
@@ -63,7 +63,7 @@ fun testaFuncionarios() {
     println("Salario com Bonificação: ${juinha.bonificacao}")
 
     println()
-    println("# Criando modelo.Conta modelo.Analista #")
+    println("# Criando Analista #")
     println()
 
     println("Nome: ${hiro.nome}")
