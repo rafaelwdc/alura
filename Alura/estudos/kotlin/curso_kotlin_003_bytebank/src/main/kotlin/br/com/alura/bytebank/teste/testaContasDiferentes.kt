@@ -1,27 +1,52 @@
-import br.com.alura.bytebank.modelo.Cliente
-import br.com.alura.bytebank.modelo.Conta
-import br.com.alura.bytebank.modelo.ContaCorrente
-import br.com.alura.bytebank.modelo.ContaPoupanca
+import br.com.alura.bytebank.modelo.*
 
 fun testaContasDiferentes() {
     val contaCorrente: Conta = ContaCorrente(
-        titular = Cliente(nome = "Rafael", cpf = "864.351.684-59", senha =  1234),
+        titular = Cliente(
+            nome = "Rafael",
+            cpf = "864.351.684-59",
+            senha =  1234,
+            endereco = Endereco(
+                logradouro = "R. Hiro de Bler",
+                numero = 7,
+                bairro = "Santa Steelinha",
+                cidade = "Salta da Juinha",
+                estado = "Debler do Sul",
+                cep = "800000-020",
+                complemento = "Em frente a escadaria das Gatas"
+            )
+        ),
         numero = 1000
     )
 
     val contaPoupanca: Conta = ContaPoupanca(
-        titular = Cliente(nome = "Patricky", cpf = "864.315.681-60", senha = 1234),
+        titular = Cliente(
+            nome = "Patricky",
+            cpf = "864.315.681-60",
+            senha = 1234,
+            endereco = Endereco(
+                logradouro = "R. Hiro de Bler",
+                numero = 7,
+                bairro = "Santa Steelinha",
+                cidade = "Salta da Juinha",
+                estado = "Debler do Sul",
+                cep = "800000-020",
+                complemento = "Em frente a escadaria das Gatas"
+            )
+        ),
         numero = 1001
     )
 
     println()
-    println("Titular:")
-    println("Nome do titular: ${contaCorrente.titular.nome}")
-    println("CPF do titular: ${contaCorrente.titular.cpf}")
+    println("Titular Conta Corrente:")
+    println("Nome: ${contaCorrente.titular.nome}")
+    println("CPF: ${contaCorrente.titular.cpf}")
+    println("Endereço: ${contaCorrente.titular.endereco.logradouro}, ${contaCorrente.titular.endereco.numero}\n${contaCorrente.titular.endereco.complemento}, CEP ${contaCorrente.titular.endereco.cep}\n${contaCorrente.titular.endereco.bairro}, ${contaCorrente.titular.endereco.cidade}/${contaCorrente.titular.endereco.estado}, ${contaCorrente.titular.endereco.cidade}")
     println()
-    println("Titular:")
-    println("Nome do titular: ${contaPoupanca.titular.nome}")
-    println("CPF do titular: ${contaPoupanca.titular.cpf}")
+    println("Titular Conta Polpança:")
+    println("Nome: ${contaPoupanca.titular.nome}")
+    println("CPF: ${contaPoupanca.titular.cpf}")
+    println("Endereço: ${contaPoupanca.titular.endereco.logradouro}, ${contaPoupanca.titular.endereco.numero}\n${contaPoupanca.titular.endereco.complemento}, CEP ${contaPoupanca.titular.endereco.cep}\n${contaPoupanca.titular.endereco.bairro}, ${contaPoupanca.titular.endereco.cidade}/${contaPoupanca.titular.endereco.estado}, ${contaPoupanca.titular.endereco.cidade}")
     println()
 
 
