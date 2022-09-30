@@ -10,7 +10,7 @@ fun testaContasDiferentes() {
                 logradouro = "R. Hiro de Bler",
                 numero = 7,
                 bairro = "Santa Steelinha",
-                cidade = "Salta da Juinha",
+                cidade = "Salto da Juinha",
                 estado = "Debler do Sul",
                 cep = "800000-020",
                 complemento = "Em frente a escadaria das Gatas"
@@ -28,7 +28,7 @@ fun testaContasDiferentes() {
                 logradouro = "R. Hiro de Bler",
                 numero = 7,
                 bairro = "Santa Steelinha",
-                cidade = "Salta da Juinha",
+                cidade = "Salto da Juinha",
                 estado = "Debler do Sul",
                 cep = "800000-020",
                 complemento = "Em frente a escadaria das Gatas"
