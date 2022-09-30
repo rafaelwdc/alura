@@ -1,3 +1,5 @@
+import br.com.alura.bytebank.modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.ContaPoupanca
 import modelo.*
 
 fun testaComportamentosConta() {

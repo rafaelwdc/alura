@@ -1,3 +1,6 @@
+import br.com.alura.bytebank.modelo.Conta
+import br.com.alura.bytebank.modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.ContaPoupanca
 import modelo.*
 fun testaCoisasDiferentes() {
     val contaCorrente: Conta = ContaCorrente(
