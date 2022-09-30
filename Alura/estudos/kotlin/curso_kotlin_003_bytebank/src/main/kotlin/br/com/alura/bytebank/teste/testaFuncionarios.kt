@@ -1,6 +1,4 @@
 import br.com.alura.bytebank.modelo.*
-import br.com.alura.modelo.*
-import modelo.*
 
 fun testaFuncionarios() {
 

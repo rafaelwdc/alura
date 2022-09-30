@@ -1,11 +1,11 @@
 package br.com.alura.bytebank.modelo
 
 class ContaPoupanca(
-    titular: String,
+    titular: Cliente,
     numero: Int
 ) : Conta(
-    titular,
-    numero
+    titular = titular,
+    numero = numero
 ) {
     override fun saca(valor: Double) {
         val valorComTaxa = valor + 0.1

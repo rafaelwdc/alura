@@ -1,14 +1,19 @@
+import br.com.alura.bytebank.modelo.Cliente
 import br.com.alura.bytebank.modelo.ContaCorrente
 import br.com.alura.bytebank.modelo.ContaPoupanca
-import modelo.*
 
 fun testaComportamentosConta() {
     // modelo.Conta Rafael -> Ao instanciar um objeto ja declarar suas propriedades como parâmetro junto dos valores;
-    val contaRafael = ContaCorrente(titular = "Rafael", numero = 1000)
+
+
+    val clienteRafael = Cliente(nome = "Rafael", cpf = "864.351.684-59", senha = 1234)
+    val clientePatricky = Cliente(nome = "Patricky", cpf = "864.315.681-60", senha = 1234)
+
+    val contaRafael = ContaCorrente(titular = clienteRafael, numero = 1000)
     contaRafael.deposita(200.0)
 
     // modelo.Conta Patricky;
-    val contaPatricky = ContaPoupanca(titular = "Patricky", numero = 1001)
+    val contaPatricky = ContaPoupanca(titular = clientePatricky, numero = 1001)
     contaPatricky.deposita(300.0)
 
     // Prints;
