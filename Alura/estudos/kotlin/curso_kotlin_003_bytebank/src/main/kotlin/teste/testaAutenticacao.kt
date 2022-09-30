@@ -1,7 +1,4 @@
-import modelo.Cliente
-import modelo.Diretor
-import modelo.Gerente
-import modelo.SistemaInterno
+import modelo.*
 
 fun testaAutenticacao() {
     val gerente = Gerente(

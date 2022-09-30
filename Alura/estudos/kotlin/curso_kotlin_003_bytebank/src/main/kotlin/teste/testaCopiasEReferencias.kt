@@ -1,5 +1,4 @@
-import modelo.ContaCorrente
-import modelo.ContaPoupanca
+import modelo.*
 
 fun testaCopiasEReferencias() {
     val numeroX = 10

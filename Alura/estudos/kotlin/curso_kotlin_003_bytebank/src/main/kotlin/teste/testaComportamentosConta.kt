@@ -1,5 +1,4 @@
-import modelo.ContaCorrente
-import modelo.ContaPoupanca
+import modelo.*
 
 fun testaComportamentosConta() {
     // modelo.Conta Rafael -> Ao instanciar um objeto ja declarar suas propriedades como parâmetro junto dos valores;
