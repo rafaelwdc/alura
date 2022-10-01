@@ -1,26 +1,41 @@
 import br.com.alura.bytebank.modelo.*
 
 fun main() {
+    println()
+    println(1)
+    println(1.0)
+    println(true)
+    println("Teste")
 
-    val patricky = object: Autenticavel {
-        val nome: String = "Patricky"
-        val cpf: String = "xxx.xxx.xxx-xx"
-        val senha: Int = 1234
+    val endereco = Endereco()
+    println(endereco)
 
-        override fun autentica(senha: Int) = this.senha == senha
-    }
-    val sistemaInterno = SistemaInterno()
-    sistemaInterno.entra(login = patricky, senha = 1234)
-    println("Nome do Cliente ${patricky.nome}")
+    imprime()
+    imprime(1)
+    imprime(1.1)
+    imprime(endereco)
 
 
 
-    val rafael = Cliente(nome = "Rafael", cpf = "", senha = 1)
-    val contaPolpanca = ContaPoupanca(titular = rafael, numero = 1000)
-    val contaCorrente = ContaCorrente(titular = rafael, numero = 1001)
 
-    testaContasDiferentes()
 
-    println("Total de contas: ${Conta.total}")
 }
+
+fun imprime() {
+
+}
+
+fun imprime(valor: Int) {
+
+}
+
+fun imprime(valor: Double) {
+
+}
+
+fun imprime(endereco: Endereco) {
+
+}
+
+
 
