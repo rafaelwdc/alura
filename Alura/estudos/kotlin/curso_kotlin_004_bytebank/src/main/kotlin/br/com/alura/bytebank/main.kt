@@ -1,3 +1,4 @@
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
 import br.com.alura.bytebank.modelo.Endereco
 import br.com.alura.bytebank.teste.testaExpressao
 import java.lang.ArithmeticException
@@ -9,14 +10,13 @@ fun main() {
     println("Fim Main")
 }
 
-
 fun funcao1() {
     println("Inicio Função 1")
     try {
         funcao2()
-    } catch (e: ClassCastException) {
+    } catch (e: SaldoInsuficienteException) {
         e.printStackTrace()
-        println("ClassCastException foi pegado")
+        println("SaldoInsuficienteException foi pegado")
     }
     println("Fim da Função 1")
 }
@@ -26,14 +26,11 @@ fun funcao2() {
 
     for (i in 1..5) {
         println(i)
-        val endereco = Any()
-        throw ArithmeticException()
+        throw SaldoInsuficienteException()
     }
 
     println("Fim da Função 2")
 }
-
-
 
 
 
