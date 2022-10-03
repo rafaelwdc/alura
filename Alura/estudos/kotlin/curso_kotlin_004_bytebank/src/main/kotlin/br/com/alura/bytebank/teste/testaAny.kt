@@ -2,7 +2,7 @@ package br.com.alura.bytebank.teste
 
 import br.com.alura.bytebank.modelo.Endereco
 
-private fun testaEquals() {
+fun testaAny() {
     val endereco = Endereco(
         logradouro = "Rua Vergueiro",
         complemento = "Alura",
