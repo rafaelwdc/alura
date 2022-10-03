@@ -1,10 +1,11 @@
-import br.com.alura.bytebank.exception.SaldoInsuficienteException
 import br.com.alura.bytebank.modelo.Endereco
 
 fun main() {
-    var enderecoNulo : Endereco? = null
-    val enderecoNaoNulo : Endereco = enderecoNulo!!
-    enderecoNaoNulo.logradouro
+    var enderecoNulo: Endereco? = Endereco(logradouro = "Rua Vergueiro")
+    val logradouroNovo: String? = enderecoNulo?.logradouro
+    enderecoNulo?.let { endereco ->
+        println(endereco.logradouro.length)
+    }
 }
 
 
