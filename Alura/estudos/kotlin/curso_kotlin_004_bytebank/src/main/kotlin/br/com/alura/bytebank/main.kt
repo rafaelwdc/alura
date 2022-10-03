@@ -3,6 +3,27 @@ import java.lang.ClassCastException
 
 fun main() {
     println("Inicio Main")
+    val entrada: String = "1.0"
+    val valorRecebido: Double? = try {
+        entrada.toDouble()
+    } catch (e: NumberFormatException) {
+        println("Problema na Conversão")
+        e.printStackTrace()
+        null
+    }
+
+    val valorComTaxa: Double? = if (valorRecebido != null) {
+        valorRecebido + 0.1
+    } else {
+        null
+    }
+
+    if (valorComTaxa != null) {
+        println("Valor Recebido: $valorComTaxa")
+    } else {
+        println("Valor inválido")
+    }
+
     funcao1()
     println("Fim Main")
 }
