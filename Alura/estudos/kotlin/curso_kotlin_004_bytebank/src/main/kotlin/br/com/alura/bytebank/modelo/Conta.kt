@@ -1,11 +1,14 @@
 package br.com.alura.bytebank.modelo
 
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
+
 abstract class Conta(
     val titular: Cliente,
     val numero: Int
 ) {
     var saldo = 0.0
         protected set
+
     companion object {
         var total = 0
             private set
@@ -14,6 +17,9 @@ abstract class Conta(
 
     init {
         println("Criando conta")
+        println(this.titular.nome)
+        println(this.numero)
+        println(this.saldo)
         total++
     }
 
@@ -22,14 +28,15 @@ abstract class Conta(
             this.saldo += valor
         }
     }
+
     abstract fun saca(valor: Double)
-    fun transfere(valor: Double, destino: Conta): Boolean {
-        if (saldo >= valor) {
-            saldo -= valor
-            destino.deposita(valor)
-            return true
+    fun transfere(valor: Double, destino: Conta) {
+        if (saldo < valor) {
+            throw SaldoInsuficienteException()
         }
-        return false
+
+        saldo -= valor
+        destino.deposita(valor)
     }
 }
 
@@ -37,7 +44,7 @@ class ContaCorrente(
     titular: Cliente,
     numero: Int
 ) : Conta(
-    titular =  titular,
+    titular = titular,
     numero = numero
 ) {
     override fun saca(valor: Double) {
@@ -56,8 +63,8 @@ class ContaPoupanca(
     numero = numero
 ) {
     override fun saca(valor: Double) {
-        val valorComTaxa: Double = valor + 0.1
-        if(this.saldo >= valorComTaxa) {
+        val valorComTaxa: Double = valor + 0.5
+        if (this.saldo >= valorComTaxa) {
             this.saldo -= valorComTaxa
         }
     }

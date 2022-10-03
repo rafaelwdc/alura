@@ -1,12 +1,8 @@
 import br.com.alura.bytebank.exception.SaldoInsuficienteException
-import br.com.alura.bytebank.modelo.Endereco
-import br.com.alura.bytebank.teste.testaExpressao
-import java.lang.ArithmeticException
-import java.lang.ClassCastException
 
 fun main() {
     println("Inicio Main")
-    funcao1()
+    testaComportamentosConta()
     println("Fim Main")
 }
 
