@@ -27,11 +27,5 @@ fun main() {
     println(titulos)
 }
 
-fun List<Livro>.imprimeComMarcadores() {
-    val textoFormatado = this.joinToString(separator = "\n") {
-        " - ${it.titulo} de ${it.autor}, ${it.anoPublicacao}"
-    }
-    println("\n        #### Lista de livros #### \n\n$textoFormatado ")
-}
 
 
