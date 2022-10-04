@@ -1,6 +1,5 @@
-package br.com.alura.array
-
-fun main() {
+package br.com.alura.array.testa
+fun testaMetodosDefault() {
     val idades: IntArray = intArrayOf(10, 12, 18, 33, 40, 67)
 
     val maiorIdade = idades.max()
@@ -24,4 +23,3 @@ fun main() {
     val busca = idades.find { it >= 18 }
     println("Busca: $busca")
 }
-
