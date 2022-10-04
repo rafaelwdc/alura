@@ -1,3 +1,6 @@
+import br.com.alura.array.bigDecimalArrayOf
+import br.com.alura.array.somatoria
+import br.com.alura.array.testa.testaIdades
 import java.math.BigDecimal
 import java.math.RoundingMode
 
@@ -23,6 +26,22 @@ fun main() {
     }
     println("Gasto Total durante 6 meses: $gastoTotal")
 
+    val media = salariosComAumento
+        .sorted()
+        .takeLast(3)
+        .toTypedArray()
+        .media()
+    println("Media dos maiores salarios: R$ $media")
+    val mediaMenoresSalarios = salariosComAumento
+        .sorted()
+        .take(3)
+        .toTypedArray()
+        .media()
+    println("Media dos menores salarios: R$ $mediaMenoresSalarios")
+
+
+
+
 }
 
 private fun calculaAumentoRelativo(salario: BigDecimal, aumento: BigDecimal):
@@ -33,15 +52,10 @@ private fun calculaAumentoRelativo(salario: BigDecimal, aumento: BigDecimal):
         (salario * aumento).setScale(2, RoundingMode.UP)
     }
 }
-
-fun bigDecimalArrayOf(vararg valores: String): Array<BigDecimal> {
-    return Array<BigDecimal>(valores.size) { i ->
-        valores[i].toBigDecimal()
-    }
-}
-
-fun Array<BigDecimal>.somatoria(): BigDecimal {
-    return this.reduce { acumulador, valor ->
-        acumulador + valor
+fun Array<BigDecimal>.media(): BigDecimal {
+    return if(this.isEmpty()) {
+        BigDecimal.ZERO
+    } else {
+        this.somatoria() / this.size.toBigDecimal()
     }
 }
