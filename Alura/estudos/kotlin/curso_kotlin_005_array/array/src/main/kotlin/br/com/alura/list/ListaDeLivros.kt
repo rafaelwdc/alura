@@ -33,8 +33,17 @@ fun main() {
             anoPublicacao = 1946
         )
     )
-    println(livros)
+    livros.imprimeComMarcadores()
+    livros.remove(livro1)
+    livros.imprimeComMarcadores()
 }
 
+
+fun MutableList<Livro>.imprimeComMarcadores() {
+    val textoFormatado = this.joinToString(separator = "\n") {
+        " - ${it.titulo} de ${it.autor}, ${it.anoPublicacao}"
+    }
+    println("\n        #### Lista de livros #### \n\n$textoFormatado ")
+}
 
 
