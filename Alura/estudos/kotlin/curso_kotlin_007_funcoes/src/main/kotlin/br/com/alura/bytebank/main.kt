@@ -1,6 +1,18 @@
-fun main() {
+import br.com.alura.bytebank.teste.teste
 
-    println(soma(1,5))
-    println(soma(1,5))
+fun main() {
+    val minhaFuncao: () -> Unit = ::teste
+    println(minhaFuncao())
+    val minhaFuncaoClasses: () -> Unit = Teste()
+    println(minhaFuncaoClasses())
 }
-fun soma (a: Int, b: Int) : Int = a + b
+
+fun teste() {
+    println("Executa teste")
+}
+
+class Teste : () -> Unit {
+    override fun invoke() {
+        println("Executa invoke do teste")
+    }
+}
