@@ -11,6 +11,23 @@ fun main() {
         return a + b
     }
     println(minhaFuncaoAnonima(20, 10))
+
+    val calculaBonificacao: (salario: Double) -> Double = lambda@  { salario ->
+        if(salario > 1000.0) {
+            return@lambda salario + 50
+        }
+        salario + 100.0
+    }
+    println(calculaBonificacao(1000.0))
+
+    val calculadoraBonificacaoAnonima: (salario: Double) -> Double = fun(salario) : Double {
+        if(salario > 1000.0) {
+            return salario + 50
+        }
+        return salario + 100
+    }
+    println(calculadoraBonificacaoAnonima(1100.0))
+
 }
 
 private fun testaTipoFuncaoClasse() {
