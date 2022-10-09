@@ -1,14 +1,16 @@
 fun main() {
-    testaTipoFuncaoClasse()
-    testaTipoFuncaoReferencia()
-//    val minhaFuncaoLambda = {
-//        println("executa como Lambda")
-//    }
-//    println(minhaFuncaoLambda)
-//    val minhaFuncaoAnonima: () -> Unit = fun () {
-//        println("executa como Anônima")
-//    }
-//    println(minhaFuncaoAnonima)
+//    testaTipoFuncaoClasse()
+//    testaTipoFuncaoReferencia()
+
+    val minhaFuncaoLambda: (Int, Int) -> Int = { a: Int, b: Int ->
+        a + b
+    }
+    println(minhaFuncaoLambda(15,10))
+
+    val minhaFuncaoAnonima: (Int, Int) -> Int = fun (a: Int, b: Int): Int {
+        return a + b
+    }
+    println(minhaFuncaoAnonima(20, 10))
 }
 
 private fun testaTipoFuncaoClasse() {
