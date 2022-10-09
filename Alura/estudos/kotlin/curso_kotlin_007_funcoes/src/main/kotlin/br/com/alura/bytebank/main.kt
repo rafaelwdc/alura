@@ -1,34 +1,30 @@
-import br.com.alura.bytebank.teste.teste
-
 fun main() {
-//    testaTipoFuncaoClasse()
-//    testaTipoFuncaoReferencia()
-    val minhaFuncaoLambda = {
-        println("executa como Lambda")
-    }
-    println(minhaFuncaoLambda)
-    val minhaFuncaoAnonima: () -> Unit = fun () {
-        println("executa como Anônima")
-    }
-    println(minhaFuncaoAnonima)
+    testaTipoFuncaoClasse()
+    testaTipoFuncaoReferencia()
+//    val minhaFuncaoLambda = {
+//        println("executa como Lambda")
+//    }
+//    println(minhaFuncaoLambda)
+//    val minhaFuncaoAnonima: () -> Unit = fun () {
+//        println("executa como Anônima")
+//    }
+//    println(minhaFuncaoAnonima)
 }
 
 private fun testaTipoFuncaoClasse() {
-    val minhaFuncaoClasses: () -> Unit = Teste()
-    println(minhaFuncaoClasses())
+    val minhaFuncaoClasses: (Int, Int) -> Int = Soma()
+    println(minhaFuncaoClasses(10,10))
 }
 
 private fun testaTipoFuncaoReferencia() {
-    val minhaFuncao: () -> Unit = ::teste
-    println(minhaFuncao())
+    val minhaFuncao: (Int, Int) -> Int = ::soma
+    println(minhaFuncao(5,10))
 }
 
-fun teste() {
-    println("Executa teste")
+fun soma(a: Int, b: Int): Int {
+    return a + b
 }
 
-class Teste : () -> Unit {
-    override fun invoke() {
-        println("Executa invoke do teste")
-    }
+class Soma : (Int, Int) -> Int {
+    override fun invoke(a: Int, b: Int): Int = a + b
 }

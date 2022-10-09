@@ -13,11 +13,11 @@ fun testaNullable() {
             it.complemento?.length ?: throw IllegalStateException("Complemento não pode ser Vazio")
         println(tamanhoComplemento)
     }
-    teste(1)
-    teste("")
+    soma(1)
+    soma("")
 }
 
-fun teste(valor: Any) {
+fun soma(valor: Any) {
     val numero: Int? = valor as? Int
     println(numero)
 }
