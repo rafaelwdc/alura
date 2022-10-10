@@ -17,7 +17,6 @@ class Cliente(
         println("Criando cliente: ")
         println(this.nome)
         println(this.cpf)
-        println(this.endereco)
 
     }
 
