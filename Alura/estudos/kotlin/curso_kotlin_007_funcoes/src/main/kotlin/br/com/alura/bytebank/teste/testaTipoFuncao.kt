@@ -31,14 +31,14 @@ fun testaFuncaoLambda() {
     println(calculaBonificacao(1000.0))
 }
 
- fun testaTipoFuncaoClasse() {
+fun testaTipoFuncaoClasse() {
     val minhaFuncaoClasses: (Int, Int) -> Int = Soma()
-    println(minhaFuncaoClasses(10,10))
+    println(minhaFuncaoClasses(10, 10))
 }
 
- fun testaTipoFuncaoReferencia() {
+fun testaTipoFuncaoReferencia() {
     val minhaFuncao: (Int, Int) -> Int = ::soma
-    println(minhaFuncao(5,10))
+    println(minhaFuncao(5, 10))
 }
 
 fun soma(a: Int, b: Int): Int {
