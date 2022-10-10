@@ -1,15 +1,16 @@
 import br.com.alura.bytebank.modelo.Cliente
 import br.com.alura.bytebank.modelo.ContaPoupanca
 import br.com.alura.bytebank.modelo.Endereco
+import br.com.alura.bytebank.teste.testaHOF
 
 fun main() {
-    testaRun()
+    testaHOF()
 }
 
 fun testaRun() {
     val taxaAnual = 0.05
     val taxaMensal = taxaAnual / 12
-    
+
     println("Taxa mensal $taxaMensal")
 
     val contaPoupanca = ContaPoupanca(Cliente(nome = "Rafael", cpf = "864.654.321-59", senha = 4321), 1000)
