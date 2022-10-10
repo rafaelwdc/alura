@@ -36,7 +36,6 @@ class Endereco(
 
         return true
     }
-
     override fun hashCode(): Int {
         var result = logradouro.hashCode()
         result = 31 * result + numero
@@ -49,6 +48,13 @@ class Endereco(
 
 
     }
-
-
+    fun completo(): String {
+        return """ 
+            $logradouro, $numero 
+            $bairro
+            $cidade - $estado
+            $cep
+            $complemento
+        """.trimIndent()
+    }
 }
