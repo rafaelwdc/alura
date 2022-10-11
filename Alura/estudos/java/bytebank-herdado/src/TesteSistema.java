@@ -15,8 +15,7 @@ public class TesteSistema {
 		si.autentica(g);
 		si.autentica(adm);
 		si.autentica(cliente);
-
-
+		
 	}
-
+	
 }
