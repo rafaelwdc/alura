@@ -17,5 +17,4 @@ class MainActivity : Activity() {
         val valor = findViewById<TextView>(R.id.valor)
         valor.text = "19.99"
     }
-
 }
