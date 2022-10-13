@@ -1,48 +1,48 @@
 package br.com.alura.orgs.ui.activity
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.orgs.R
 import br.com.alura.orgs.dao.ProdutosDAO
-import br.com.alura.orgs.model.Produto
 import br.com.alura.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.math.BigDecimal
 
-class MainActivity : AppCompatActivity() {
+class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos) {
+
+    val dao = ProdutosDAO()
+    private val adapter = ListaProdutosAdapter(context = this, produtos = dao.buscaTodos())
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        configuraRecyclerView()
+        configuraFAB()
     }
 
     override fun onResume() {
         super.onResume()
-        setContentView(R.layout.activity_main)
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val dao = ProdutosDAO()
-        Log.i("MainActivity", "onCreate: ${dao.buscaTodos()}")
-        recyclerView.adapter = ListaProdutosAdapter(context = this, produtos = dao.buscaTodos())
+        adapter.atualiza(dao.buscaTodos())
+    }
+
+    private fun configuraFAB() {
         val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         fab.setOnClickListener {
-            val intent = Intent(this, FormularioProdutoActivity::class.java)
-            startActivity(intent)
+            vaiParaFormularioProduto()
         }
     }
+
+    private fun vaiParaFormularioProduto() {
+        val intent = Intent(this, FormularioProdutoActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun configuraRecyclerView() {
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.adapter = adapter
+    }
 }
-
-
-
-
-
-
-
-
 
 
 //Produto(
