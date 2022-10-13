@@ -11,15 +11,15 @@ import br.com.alura.orgs.R
 
 class FormularioProdutoActivity :
     AppCompatActivity(R.layout.activity_formulario_produto) {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
         botaoSalvar.setOnClickListener {
             val campoNome = findViewById<EditText>(R.id.nome)
             val nome = campoNome.text.toString()
-            Log.i("FormularioProduto", "onCreate: $nome")
-        }
+            Log.i("FormularioProduto", "onCreate: $nome")        }
 
     }
 
