@@ -1,27 +1,35 @@
 import fs from 'fs';
 import chalk from 'chalk';
-import { error } from 'console';
 
 function trataErro(erro) {
     console.log(erro);
     throw new Error(chalk.red(erro.code, 'Arquivo não encontrado'))
 }
 
-function pegaArquivo(caminhoDoArquivo) {
+// aSync && aWait
+
+
+async function pegaArquivo(caminhoDoArquivo) {
+    try{
     const encoding = 'utf-8';
-    fs.promises.readFile(caminhoDoArquivo, encoding) 
-        .then((texto) => console.log(chalk.green(texto)))
-        .catch(trataErro)
-}
+    const texto = await fs.promises.readFile(caminhoDoArquivo,encoding);
+    console.log(chalk.green(texto));
+    } catch(erro) {
+        trataErro(erro);
+    };
+};
+
+
+//------------------------------------------------------------------//
+
+// Promises com then()
 
 // function pegaArquivo(caminhoDoArquivo) {
 //     const encoding = 'utf-8';
-//     fs.readFile(caminhoDoArquivo, encoding, (erro, texto) => {
-//         if(erro) {
-//             trataErro(erro)
-//         };
-//         console.log(chalk.green(texto));
-//     });
-// };
+//     fs.promises.readFile(caminhoDoArquivo, encoding) 
+//         .then((texto) => console.log(chalk.green(texto)))
+//         .catch(trataErro)
+// }
 
 pegaArquivo('./arquivos/texto.md');
+pegaArquivo('./arquivos/');
