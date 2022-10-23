@@ -3,22 +3,23 @@ package br.com.alura.orgs.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
-import br.com.alura.orgs.R
-import br.com.alura.orgs.dao.ProdutosDAO
+import br.com.alura.orgs.dao.ProdutosDao
+import br.com.alura.orgs.databinding.ActivityListaProdutosActivityBinding
 import br.com.alura.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos) {
+class ListaProdutosActivity : AppCompatActivity() {
 
-    val dao = ProdutosDAO()
+    private val dao = ProdutosDao()
     private val adapter = ListaProdutosAdapter(context = this, produtos = dao.buscaTodos())
-
+    private val binding by lazy {
+        ActivityListaProdutosActivityBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(binding.root)
         configuraRecyclerView()
-        configuraFAB()
+        configuraFab()
     }
 
     override fun onResume() {
@@ -26,35 +27,21 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
         adapter.atualiza(dao.buscaTodos())
     }
 
-    private fun configuraFAB() {
-        val fab = findViewById<FloatingActionButton>(R.id.activity_lista_produto_fab)
+    private fun configuraFab() {
+        val fab = binding.activityListaProdutosFab
         fab.setOnClickListener {
             vaiParaFormularioProduto()
         }
     }
 
-    private fun vaiParaFormularioProduto() {
+     private fun vaiParaFormularioProduto() {
         val intent = Intent(this, FormularioProdutoActivity::class.java)
         startActivity(intent)
     }
 
     private fun configuraRecyclerView() {
-        val recyclerView = findViewById<RecyclerView>(R.id.activity_lista_produto_recyclerView)
+        val recyclerView = binding.activityListaProdutosRecyclerView
         recyclerView.adapter = adapter
     }
+
 }
-
-
-//Produto(
-//                nome = "Guaraná",
-//                descricao = "Suco feito de guaraná amazonense colhido no coração da Amazonia",
-//                valor = BigDecimal("9.99")
-//            ), Produto(
-//                nome = "Suco de caju",
-//                descricao = "Suco feito de caju original do Piauí",
-//                valor = BigDecimal("7.99")
-//            ), Produto(
-//                nome = "Goiabada",
-//                descricao = "Colhidas no Sul de Minas as melhores goiabas do sudeste do Brasil",
-//                valor = BigDecimal("12.99")
-//            )
