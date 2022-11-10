@@ -23,6 +23,7 @@
 </head>
 <body>
 
+  <div id="conteudoForaDialog">
   <a href="#conteudoPrincipal" class="pularNavegacao">Pular para conteúdo</a>
 
   <header class="cabecalho container">
@@ -308,10 +309,10 @@
               Email:
             </label>
             <input type="email" class="dialogNewsletter-campo" placeholder="Digite seu e-mail..." id="emaiNewsletter">
-            <button class="dialogNewsletter-btn">
+            <button class="dialogNewsletter-btn" type="submit">
               Assinar newsletter
             </button>
-            <button class="dialogNewsletter-fechar">
+            <button class="dialogNewsletter-fechar" type="button">
               X
             </button>
           </form>
@@ -321,7 +322,7 @@
 
     </section> <!--fim .secaoDestaques-->
 
-    <section class="secaoContato">
+    <section class="secaoContato" inert="true">
       <div class="container">
         <h2 class="tituloPadrao">
           CONTATO
@@ -463,6 +464,8 @@
     </div>
   </footer>
   <script src="js/carousel.js"></script>
+  <script src="js/inert.js"></script>
   <script src="js/dialog.js"></script>
+  </div>
 </body>
 </html>
