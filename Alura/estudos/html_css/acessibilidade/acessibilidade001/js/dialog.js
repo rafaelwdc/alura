@@ -30,8 +30,8 @@ document.querySelector('.dialogNewsletter-fechar').addEventListener('click', fec
 
 dialogOverlay.addEventListener('click', fechandoDialog)
 
-document.addEventListener('keyUp', function(evento) {
+document.addEventListener('keyup', function(evento) {
   if(evento.keyCode == 27) {
-    fechandoDialog;
+    fechandoDialog();
   };
 });
