@@ -104,7 +104,7 @@
   color: transparent;
   font-size: 0;
 }
-
+ 
 .dialogNewsletter-fechar:before {
   content: 'x';
   color: #666;
