@@ -17,13 +17,21 @@
   border: 1px solid #7D7D7D;
   color: transparent;
   line-height: 1;
-  transition: .2s ease-in;
+  transition: background-color .2s ease-in, color .2s ease-in;
+  box-sizing: border-box;
+}
+
+.contatoCampo-checkbox:hover .contatoCampo-checkbox:before, .contatoCampo-checkbox:hover .contatoCampo-checkbox:before {
+  border: 2px solid #333;
+
 }
 
 .contatoCampo-checkbox:checked + .contatoCampo-label:before {
-  content: 'x';
+  content: '';
   color: #fff;
   background-image: radial-gradient(circle, #2DA4E7, #2F80ED);
+  background-color: transparent;
+  line-height: .9;
 }
 
 .contatoCampo-checkbox {
