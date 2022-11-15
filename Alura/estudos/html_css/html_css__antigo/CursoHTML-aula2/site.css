@@ -30,6 +30,7 @@ h1, h2 {
 
 main p {
     text-align: justify;
+    margin: 20px 0;
 }
 
 main a {
