@@ -2,6 +2,7 @@ body {
     font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
     font-size: 20px;
+    line-height: 1.5;
 }
 
 ul {
@@ -16,6 +17,7 @@ main h1 {
     text-align: center;
     background-color: #851944;
     color: #FFF;
+    border-bottom: 10px solid black;
 }
 
 /* div {
