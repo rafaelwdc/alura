@@ -4,6 +4,10 @@ body {
     font-size: 20px;
 }
 
+ul {
+    list-style-type:none;
+}
+
 h1, h2 {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
 }
@@ -36,6 +40,7 @@ blockquote {
 aside {
     background-color: #3C1D3D;
     color: #F2FFFC;
+    text-align: center;
 }
 
 footer {
