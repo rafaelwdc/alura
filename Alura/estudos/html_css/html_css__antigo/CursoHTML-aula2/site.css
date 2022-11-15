@@ -37,7 +37,11 @@ p {
 
 blockquote {
     background-color: #D9E5E3;
+    border-bottom-color: #333;
+    border-right-color: #FFF;
 }
+
+
 
 aside {
     background-color: #3C1D3D;
