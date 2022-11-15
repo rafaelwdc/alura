@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        .retangulos {
+            border-left: 10px solid red;
+            border-right: 10px solid red;
+            width: 5px;
+            height: 30px;
+        }
+
+        .triangulo {
+            border-bottom: 30px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            width: 0;
+        }
+        .gravata {
+            border-left: 30px solid red;
+            border-bottom: 30px solid transparent;
+            border-top: 30px solid transparent;
+            border-right: 30px solid red;
+            width: 0;
+        }
+        .triangulo__reto {
+            border-left: 30px solid red;
+            border-bottom: 30px solid red;
+            border-top: 30px solid transparent;
+            border-right: 30px solid transparent;
+            width: 0;
+        }
+
+        article {
+            display: flex;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <div class="retangulos"></div>
+        <div class="triangulo"></div>
+        <div class="triangulo__reto"></div>  
+        <div class="gravata"></div>
+    </article>
+</body>
+</html>
