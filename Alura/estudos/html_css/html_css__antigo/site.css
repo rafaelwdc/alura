@@ -29,7 +29,8 @@ p {
 	border: 10px solid #C2CCCA;
 	width: 250px;
 	box-sizing: border-box;
-	margin: 20px 40px;
+	margin: 0;
+    float: right;
 }
 
 .navegacao-site {
@@ -77,6 +78,7 @@ em {
 
 .subtitulo-texto {
 	font-size: 30px;
+    clear: both;
 }
 
 .icones-redes-sociais li {
@@ -119,4 +121,12 @@ nav a {
 
 .linkedin {
 	background-image: url(linkedin.png);
+}
+
+.fiat {
+    float: right;
+}
+
+.petrobras {
+    float: left;
 }
