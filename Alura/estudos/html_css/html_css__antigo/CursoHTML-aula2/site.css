@@ -44,7 +44,7 @@ blockquote {
     border: 10px solid ;
     padding: 16px;
     width: 250px;
-    margin: 0;
+    margin:20px 40px;
 }
 
 ul {
@@ -54,12 +54,18 @@ ul {
 main div {
     width: 720px;
     margin: auto;
+    padding: 30px 0;
 }
 
 aside {
     background-color: #3C1D3D;
     color: #F2FFFC;
     text-align: center;
+}
+
+aside h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
 }
 
 footer {
@@ -85,4 +91,12 @@ aside {
 
 blockquote, aside, footer {
     padding: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
 }
