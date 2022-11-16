@@ -17,11 +17,13 @@ main h1 {
     padding: 25px;
     margin: 0;
     box-sizing: border-box;
+    text-transform: uppercase;
 }
 
 h2 {
     font-size: 40px;
     font-family:  "Open Sans Condensed", sans-serif;
+    clear: right;
 }
 
 h1, h2 {
@@ -45,6 +47,7 @@ blockquote {
     padding: 16px;
     width: 250px;
     margin:20px 40px;
+    float: right;
 }
 
 ul {
@@ -113,4 +116,28 @@ article {
     font-size: 24px;
     text-align: center;
     background-color: #E6E7E8;
+}
+
+.icones-sociais li {
+    display: inline-block;
+}
+
+.icones-sociais a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    text-indent: -9999px;
+}
+
+.github {
+    background-image: url(github.png);
+}
+
+.twitter {
+    background-image: url(twitter.png);
+}
+
+.linkedin {
+    background-image: url(linkedin.png);
 }
