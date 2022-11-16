@@ -85,8 +85,7 @@ aside a {
 
 aside {
     background-color: #3C1D3D;
-    color: #F2FFFC;
-	
+    color: #F2FFFC;	
 }
 
 blockquote, aside, footer {
@@ -99,4 +98,19 @@ strong {
 
 em {
     font-style: italic;
+}
+
+article {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.leia-mais {
+    padding: 8px;
+    margin: 16px;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    background-color: #E6E7E8;
 }
