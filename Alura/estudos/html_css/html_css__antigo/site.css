@@ -39,9 +39,14 @@ p {
 }
 
 .rodape-pagina {
+	position: fixed;
+	bottom: 0;
 	background-color: #000;
 	color: #F2FFFC;
 	clear: both;
+	position: fixed;
+	width: 100%;
+	text-align: center;
 }
 
 main a {
@@ -60,7 +65,8 @@ main a {
 .container {
 	width: 720px;
 	margin: auto;
-	padding: 30px 0;
+	padding: 40px 0;
+	padding-bottom: 80px;
 }
 
 .navegacao-site h1 {
@@ -138,7 +144,6 @@ main {
 
 .minha-foto, .navegacao-site {
 	float: right;
-	width: 15%;
 	box-sizing: border-box;
 	border-left: 10px solid black;
 	border-bottom: 10px solid black;
@@ -147,4 +152,16 @@ main {
 cite {
 	font-style: italic;
 	float: right;
+}
+
+.minha-foto {
+	position: absolute;
+	top: 0;
+	right: 0px;
+}
+
+aside {
+	position: relative;
+	top: 310px;
+	width: 15%;
 }
