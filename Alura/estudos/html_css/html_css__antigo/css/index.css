@@ -16,67 +16,67 @@
 .eficiencia {
     top: 23%;
     left: 70%;
-    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(4px);
 }
 
 .boas-praticas {
     top: 44%;
     left: 20%;
-    transform: rotate(10deg);
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(1px);
 }
 
 .codigo-limpo {
     top: 35%;
     left: 10%;
-    transform: rotate(-10deg);
+    transform: translate(-50%, -50%) rotate(-10deg) translateZ(2px);
 }
 
 .css3 {
     top: 35%;
     left: 30%;
-    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(5deg) translateZ(2px);
 }
 
 .html5 {
     top: 40%;
     left: 80%;
-    transform: rotate(10deg);
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px);
 }
 
 .javascript {
     top: 10%;
     left: 60%;
-    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(1px);
 }
 
 .acessibilidade {
     top: 20%;
     left: 20%;
-    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(3px);
 }
 
 .responsivo {
     top: 10%;
     left: 10%;
-    transform: rotate(10deg);
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(3px);
 }
 
 .otimizacoes {
     top: 10%;
     left: 80%;
-    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(2px);
 }
 
 .agilidade {
     top: 10%;
     left: 30%;
-    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(5deg) translateZ(1px);
 }
 
 .design {
     top: 40%;
     left: 65%;
-    transform: rotate(10deg);
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px);
 }
 
 .eficiencia, .boas-praticas, .codigo-limpo, .css3, .html5, .javascript, .acessibilidade, .responsivo, .otimizacoes, .agilidade, .design    {
