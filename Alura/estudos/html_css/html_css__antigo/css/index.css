@@ -14,96 +14,73 @@
 }
 
 .eficiencia {
-    position: absolute;
-    top: 10%;
-    left: 85%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 23%;
+    left: 70%;
+    transform: rotate(-5deg);
 }
 
 .boas-praticas {
-    position: absolute;
-    top: 25%;
-    left: 63.5%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 44%;
+    left: 20%;
+    transform: rotate(10deg);
 }
 
 .codigo-limpo {
-    position: absolute;
-    top: 25%;
-    left: 84.5%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 35%;
+    left: 10%;
+    transform: rotate(-10deg);
 }
 
 .css3 {
-    position: absolute;
-    top: 10%;
-    left: 65%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 35%;
+    left: 30%;
+    transform: rotate(5deg);
 }
 
 .html5 {
-    position: absolute;
-    top: 35%;
-    left: 75%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 40%;
+    left: 80%;
+    transform: rotate(10deg);
 }
 
 .javascript {
-    position: absolute;
-    top: 17%;
-    left: 75%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 10%;
+    left: 60%;
+    transform: rotate(-5deg);
 }
 
 .acessibilidade {
-    position: absolute;
-    top: 10%;
-    right: 85%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 20%;
+    left: 20%;
+    transform: rotate(-5deg);
 }
 
 .responsivo {
-    position: absolute;
     top: 10%;
-    right: 70%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    left: 10%;
+    transform: rotate(10deg);
 }
 
 .otimizacoes {
-    position: absolute;
-    top: 25%;
-    right: 70%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 10%;
+    left: 80%;
+    transform: rotate(-5deg);
 }
 
 .agilidade {
-    position: absolute;
-    top: 17%;
-    right: 77.5%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 10%;
+    left: 30%;
+    transform: rotate(5deg);
 }
 
 .design {
-    position: absolute;
-    top: 25%;
-    right: 85%;
-    font-family: 'Shadows Into Light', cursive;
-    color: #D5447E;
+    top: 40%;
+    left: 65%;
+    transform: rotate(10deg);
 }
-.react {
+
+.eficiencia, .boas-praticas, .codigo-limpo, .css3, .html5, .javascript, .acessibilidade, .responsivo, .otimizacoes, .agilidade, .design    {
     position: absolute;
-    top: 35%;
-    right: 78%;
     font-family: 'Shadows Into Light', cursive;
     color: #D5447E;
 }
