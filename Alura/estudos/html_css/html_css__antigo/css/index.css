@@ -62,7 +62,7 @@
 .acessibilidade {
     position: absolute;
     top: 10%;
-    right: 70%;
+    right: 85%;
     font-family: 'Shadows Into Light', cursive;
     color: #D5447E;
 }
@@ -85,16 +85,23 @@
 
 .agilidade {
     position: absolute;
-    top: 15%;
-    right: 80%;
+    top: 17%;
+    right: 77.5%;
     font-family: 'Shadows Into Light', cursive;
     color: #D5447E;
 }
 
 .design {
     position: absolute;
-    top: 20%;
-    right: 75%;
+    top: 25%;
+    right: 85%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+.react {
+    position: absolute;
+    top: 35%;
+    right: 78%;
     font-family: 'Shadows Into Light', cursive;
     color: #D5447E;
 }
