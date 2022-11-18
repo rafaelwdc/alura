@@ -106,6 +106,8 @@
 .saudacao em {
     color: #851944;
     font-size: 4em;
+    transform:  rotate(-5deg) skew(-10deg);
+    display: inline-block;
 }
 .botao-index {
     font-size: 1.25em;
