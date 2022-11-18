@@ -13,9 +13,9 @@ h1, h2 {
 	text-align: center;
 	background-color: #851944;
 	color: #FFF;
-	padding: 25px;
-	border-bottom: 10px solid black;
-	font-size: 60px;
+    padding: 1.25rem;
+    border-bottom: .5rem solid #000;
+	font-size: 300%;
 	text-transform: uppercase;
 }
 
@@ -31,6 +31,8 @@ p {
 	box-sizing: border-box;
 	margin: 20px 40px;
 }
+
+
 
 .navegacao-site {
 	text-align: center;
