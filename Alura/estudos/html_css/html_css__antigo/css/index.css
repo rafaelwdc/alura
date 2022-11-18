@@ -11,6 +11,7 @@
 .foto-home {
     height: 200px;
     border-radius: 50%;
+    box-shadow: 0 0 1em #000;
 }
 
 .eficiencia {
@@ -151,6 +152,7 @@
     margin: 2em auto;
     display: block;
     text-align: center;
+    box-shadow: 0 0 1em #000, inset 0 0 .5em #fff;
 }
 .secao-inicio {
     padding: 2em;
