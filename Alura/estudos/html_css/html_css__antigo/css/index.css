@@ -79,7 +79,17 @@
     transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(1.60);
 }
 
-.eficiencia, .boas-praticas, .codigo-limpo, .css3, .html5, .javascript, .acessibilidade, .responsivo, .otimizacoes, .agilidade, .design {
+.eficiencia, 
+.boas-praticas, 
+.codigo-limpo, 
+.css3, 
+.html5, 
+.javascript, 
+.acessibilidade, 
+.responsivo, 
+.otimizacoes, 
+.agilidade, 
+.design {
     position: absolute;
     font-family: 'Shadows Into Light', cursive;
     color: #D5447E;
