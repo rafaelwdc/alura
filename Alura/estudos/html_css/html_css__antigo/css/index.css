@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 .inicio_post {
     position: absolute;
     top: 3em;
@@ -8,6 +10,95 @@
 .foto-home {
     height: 200px;
 }
+
+.eficiencia {
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.boas-praticas {
+    position: absolute;
+    top: 25%;
+    left: 63.5%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.codigo-limpo {
+    position: absolute;
+    top: 25%;
+    left: 84.5%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.css3 {
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.html5 {
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.javascript {
+    position: absolute;
+    top: 17%;
+    left: 75%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.acessibilidade {
+    position: absolute;
+    top: 10%;
+    right: 70%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.responsivo {
+    position: absolute;
+    top: 10%;
+    right: 70%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.otimizacoes {
+    position: absolute;
+    top: 25%;
+    right: 70%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.agilidade {
+    position: absolute;
+    top: 15%;
+    right: 80%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
+.design {
+    position: absolute;
+    top: 20%;
+    right: 75%;
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+}
+
 .saudacao p {
     font-size: 1.5em;
     color: #99A;
@@ -100,3 +191,4 @@ main {
     padding-bottom: 0;
     float: none;
 }
+
