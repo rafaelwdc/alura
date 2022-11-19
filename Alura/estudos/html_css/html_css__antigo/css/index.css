@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 .titulo-principal {
-    background-image: linear-gradient(to bottom, #f00, #888, #000);
+    background-image: linear-gradient(to bottom, #f00, #888 80%, #000);
 }
 
 .inicio_post {
