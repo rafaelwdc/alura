@@ -2,6 +2,7 @@
 
 .titulo-principal {
     background-image: linear-gradient(to bottom, #f00, #888 80%, #000);
+    background-size: 100% 200px;
 }
 
 .inicio_post {
