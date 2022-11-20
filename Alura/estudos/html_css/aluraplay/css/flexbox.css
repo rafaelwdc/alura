@@ -53,9 +53,6 @@
     display: none;
 }
 
-
-
-
 /* - # - RODAPÉ - # - */
 
 .rodape__container {
@@ -72,6 +69,23 @@
     .cabecalho__pesquisar__item {
         display: block;
     }
+
+    /* - # - MENU - # - */
+
+    .menu__container {
+        top: 80px;
+        left: 0;
+        width: 74px;
+        height: 100%;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 25px;
+    }
+
 
     /* - # - RODAPÉ - # - */
 
