@@ -125,6 +125,7 @@
         flex-direction: column-reverse;
     }
 
+    /*  - ! - Leitores de tela ignoram o atributo "order" - ! -
     .jogos {
         order: 3;
     }
@@ -139,5 +140,5 @@
 
     .maispagina {
         order: 4;
-    }
+    } */
 }
