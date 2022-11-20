@@ -17,3 +17,6 @@
     grid-row: 1 / 4;
 }
 
+.secao-horizontal .cartao__titulo {
+    align-self: end;
+}
