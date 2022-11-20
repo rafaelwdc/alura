@@ -22,6 +22,15 @@
     gap: 15px;
 }
 
+/* - # - MENU - # - */
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 74px;
+    width: 100%;
+}
+
 /* - # - RODAPÉ - # - */
 
 .rodape__container {
