@@ -235,8 +235,6 @@ main {
 }
 
 .post-blog + .post-blog {
-    /* trocamos padding-bottom e margin-bottom por
-        padding-top e margin-top */
     padding-top: 1em;
     margin-top: 1.5em;
     background-image: linear-gradient(to right, 
@@ -246,6 +244,5 @@ main {
     );
     background-size: 100% 1px;
     background-repeat: no-repeat;
-    /* trocamos "bottom center" por "top center" */
     background-position: top center;
 }
