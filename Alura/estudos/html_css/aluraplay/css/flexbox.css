@@ -41,11 +41,18 @@
     align-self: center;
 }
 
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .menu__lista:nth-child(2),
 .menu__lista:nth-child(3),
 .menu__lista:nth-child(4) {
     display: none;
 }
+
 
 
 
