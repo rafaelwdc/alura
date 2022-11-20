@@ -99,6 +99,7 @@
     /* - # - MENU - # - */
     .menu__container {
         width: 239px;
+        height: 90%;
         overflow: scroll;
     }
 
@@ -120,4 +121,23 @@
         align-items: center;
     }
 
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .jogos {
+        order: 3;
+    }
+
+    .filmes {
+        order: 2;
+    }
+
+    .premium {
+        order: 1; 
+    }
+
+    .maispagina {
+        order: 4;
+    }
 }
