@@ -1,3 +1,5 @@
+/* - # - CABEÇALHO - # - */
+
 .cabecalho__container {
     display: flex;
     justify-content: space-between;
@@ -10,15 +12,27 @@
     display: none;
 }
 
+/* - # - RODAPÉ - # - */
+
 .rodape__container {
     display: flex;
-    flex-direction: column;
-    
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap;
 }
 
 @media (min-width: 834px) {
+
+    /* - # - CABEÇALHO - # - */
+
     .cabecalho__pesquisar__item {
         display: block;
+    }
+
+    /* - # - RODAPÉ - # - */
+
+    .rodape__container {
+        justify-content: space-between;
     }
 }
 
