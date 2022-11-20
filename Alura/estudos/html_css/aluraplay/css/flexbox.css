@@ -111,6 +111,13 @@
     .menu__lista {
         height: auto;
         padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
     }
 
 }
