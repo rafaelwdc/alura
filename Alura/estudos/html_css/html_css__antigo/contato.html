@@ -13,15 +13,23 @@
     <body>
 
         <main>
-            <h1 class="titulo_principal">Contatos</h1>
+            <h1 class="titulo-principal">Contatos</h1>
             <div class="container">
                 <form>
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
-                    <label for="nome">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <input type="radio" name="consultoria" id="consultoria">
+                    <input type="text" name="nome" id="nome" placeholder="Seu Nome">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="e-mail" id="email" placeholder="E-mail">
+
+                    <input type="radio" name="assunto" id="consultoria" value="consult">
                     <label for="consultoria">Consultoria</label>
+
+                    <input type="radio" name="assunto" id="blog" value="blog">
+                    <label for="blog">Blog</label>
+
+                    <input type="radio" name="assunto" id="outro" value="outro">
+                    <label for="outro">Outro</label>
                 </form>
             </div>
         </main>

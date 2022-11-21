@@ -1,11 +1,4 @@
-html, body {
-    height: 100%;
-    overflow-x: hidden;
-}
-
 body {
-    perspective: 6px;
-    perspective-origin: 50% 160px;
     font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
     font-size: 120%;
@@ -21,11 +14,6 @@ h2,
 h1 {
     text-transform: uppercase;
     font-size: 3em;
-    text-shadow: 5px 5px #000;
-}
-
-h2 {
-    text-shadow: 5px 5px #000;
 }
 
 .titulo-principal {
@@ -69,7 +57,7 @@ main p {
 }
 
 .rodape-pagina {
-    background-color: rgba(0,0,0,0.3);
+    background-color: #000;
     color: #F2FFFC;
     padding: 1em;
     clear: both;
@@ -107,15 +95,15 @@ em {
 }
 
 .github {
-    background-image: url(../img/github.png);
+    background-image: url(../imagens/github.png);
 }
 
 .twitter {
-    background-image: url(../img/twitter.png);
+    background-image: url(../imagens/twitter.png);
 }
 
 .linkedin {
-    background-image: url(../img/linkedin.png);
+    background-image: url(../imagens/linkedin.png);
 }
 
 main {
@@ -143,29 +131,4 @@ main {
     top: 0;
     right: 0;
     height: 300px;
-}
-
-.footer {
-    background-image: radial-gradient(ellipse at left bottom,
-    rgba(60, 29, 61, 0.8),
-    rgba(60, 29, 61, 0.8) 65%,
-    black 65%,
-    black 70%,
-    transparent 70%,
-    transparent);
-    width:100%;
-    background-size: 25% 100%;
-    background-repeat: no-repeat;
-}
-
-main a:hover,
-main a:focus,
-footer a:hover,
-footer a:focus {
-    color: red;
-}
-
-.navegacao-site a:hover,
-.navegacao-site a:focus {
-    text-shadow: 0 0 2px pink;
 }
