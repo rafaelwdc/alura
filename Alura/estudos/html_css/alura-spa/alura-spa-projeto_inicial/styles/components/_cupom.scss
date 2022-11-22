@@ -31,4 +31,25 @@
             box-shadow: 1px 1px 8px 1px $cor-primaria;
         }
     }
+    button {
+        text-transform: uppercase;
+        margin-top: .75rem;
+        outline: none;
+        height: 40px;
+        text-align: center;
+        width: 130px;
+        background-color: $cor-primaria;
+        color: $cor-secundaria;
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 2px $cor-primaria;
+        border-radius: 40px;
+        &:hover {
+            color: $cor-primaria;
+            background-color: $cor-secundaria;
+            border-color: $cor-terciaria;
+        }
+    }
 }
