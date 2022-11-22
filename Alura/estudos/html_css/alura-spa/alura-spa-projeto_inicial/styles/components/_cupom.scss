@@ -12,4 +12,23 @@
 
         }
     }
+    .input {
+        margin: 0 auto;
+        width: 540px;
+        border-radius: 40px;
+        border: 4px solid white;
+        background: white;
+        input {
+            border-radius: 20px;
+            height: 40px;
+            bottom: none;
+            width: 540px;
+            outline: none;
+            text-align: center;
+            font-size: 26px;
+        }
+        &:hover, &:focus-within {
+            box-shadow: 1px 1px 8px 1px $cor-primaria;
+        }
+    }
 }
