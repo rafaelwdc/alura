@@ -33,4 +33,12 @@ nav ul li a:hover {
   background-color: #F1E0AC;
   opacity: 0.9;
   border-radius: 45px;
+}
+.banner .inner-banner h1 {
+  font-size: 3rem;
+  color: #495371;
+}
+.banner .inner-banner h2 {
+  font-size: 1.5rem;
+  color: #74959A;
 }/*# sourceMappingURL=style.css.map */

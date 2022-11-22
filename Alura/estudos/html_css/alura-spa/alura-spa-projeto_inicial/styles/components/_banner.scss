@@ -13,5 +13,13 @@
         background-color: $cor-terciaria;
         opacity: .9;
         border-radius: 45px;
+        h1 {
+            font-size: $tamanho-do-texto;
+            color: $cor-primaria;
+        }
+        h2 {
+            font-size: $tamanho-do-texto / 2;
+            color: $cor-secundaria;
+        }
     }
 }
