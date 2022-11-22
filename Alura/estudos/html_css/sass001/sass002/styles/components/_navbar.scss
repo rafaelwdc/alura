@@ -11,6 +11,9 @@ nav {
                 text-decoration: none;
                 font-weight: bold;
                 color: $cor-primaria;
+                &:hover{
+                    border-bottom: 2px solid $cor-secundaria;
+                }
             }
         } 
     }
