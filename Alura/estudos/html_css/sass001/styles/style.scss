@@ -1,9 +1,24 @@
 $cor-principal: #fa58b6;
 $cor-secundaria: #270082;
 
-body {
+@mixin reset {
     margin: 0;
     padding: 0;
+}
+
+@mixin cor-e-texto($cor-de-fundo, $cor-de-texto) {
+    width: 50%;
+        background-color: $cor-de-fundo;
+        .texto {
+            margin-top: 40%;
+            text-align: center;
+            font-size: 150px;
+            color: $cor-de-texto;
+        }
+}
+
+body {
+    @include reset;
 }
 
 .container {
@@ -11,26 +26,10 @@ body {
     display: flex;
 
     .esquerdo {
-        width: 50%;
-        background-color: $cor-principal;
-
-        .texto {
-            margin-top: 40%;
-            text-align: center;
-            font-size: 150px;
-            color: $cor-secundaria;
-        }
+        @include cor-e-texto($cor-principal, $cor-secundaria);
     }
 
     .direito {
-        width: 50%;
-        background-color: $cor-secundaria;
-        
-        .texto {
-            margin-top: 40%;
-            text-align: center;
-            font-size: 150px;
-            color: $cor-principal;
-        }
+        @include cor-e-texto($cor-secundaria, $cor-principal)
     }
 }
