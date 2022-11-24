@@ -1,0 +1,11 @@
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 33px;
+}
+
+.menu__titulo {
+    width: 100vw;
+}
