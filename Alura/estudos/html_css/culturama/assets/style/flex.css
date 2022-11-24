@@ -10,6 +10,12 @@
     width: 100vw;
 }
 
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
 @media (min-width:720px) {
     .menu {
         column-gap: 75px;
