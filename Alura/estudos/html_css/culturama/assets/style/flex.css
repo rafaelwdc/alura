@@ -9,3 +9,13 @@
 .menu__titulo {
     width: 100vw;
 }
+
+@media (min-width:720px) {
+    .menu {
+        column-gap: 75px;
+    }
+
+    .menu__titulo {
+        width: auto;
+    }
+}
