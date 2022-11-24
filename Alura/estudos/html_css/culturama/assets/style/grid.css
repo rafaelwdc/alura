@@ -21,6 +21,26 @@
         "local botao";
 }
 
+.eventos__item img {
+    grid-area: imagem;
+}
+
+.eventos__item h3 {
+    grid-area: nome;
+}
+
+.eventos__item h4 {
+    grid-area: data;
+}
+
+.eventos__item h5 {
+    grid-area: local;
+}
+
+.eventos__item button {
+    grid-area: botao;
+}
+
 @media (min-width: 720px) {
     .banner {
         grid-template-columns: calc(50% - 0.75rem) auto auto;
