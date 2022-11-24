@@ -43,6 +43,15 @@
     grid-area: botao;
 }
 
+.agenda__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.agenda__item img {
+    grid-column: 1/ 3;
+}
+
 @media (min-width: 720px) {
     .banner {
         grid-template-columns: calc(50% - 0.75rem) auto auto;
