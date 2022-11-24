@@ -20,6 +20,17 @@
     row-gap: .5rem;
 }
 
+.destaques {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
+
 @media (min-width:720px) {
     /*  Cabeçalho  */
 
