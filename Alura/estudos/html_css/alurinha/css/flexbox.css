@@ -78,6 +78,10 @@
         align-items: initial;
         text-align: center;
     }
+
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
+    }
     
     /* Nossos Cursos */
     
