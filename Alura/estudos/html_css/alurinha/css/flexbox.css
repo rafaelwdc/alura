@@ -65,6 +65,7 @@
 
 /* Media Query */
 
+/* Cabeçalho */
 .cabecalhoPrincipal-nav {
     flex-direction: column;
 }
@@ -75,6 +76,14 @@
     text-align: center;
 }
 
+/* Nossos Cursos */
+
 .conteudoPrincipal-cursos-link {
     width: 100%;
+}
+
+/* Mapa de cursos */
+
+.rodapePrincipal-navMap-list {
+    height: auto;
 }
