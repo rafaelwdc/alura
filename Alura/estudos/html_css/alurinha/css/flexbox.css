@@ -26,6 +26,10 @@
     margin-right: 0;
 }
 
+.conteudoPrincipal-cursos-link:nth-child(4n + 1) {
+    margin-left: 0;
+}
+
 /* Mapa de Cursos */
 
 .rodapePrincipal-navMap-list {
