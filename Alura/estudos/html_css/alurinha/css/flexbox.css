@@ -62,3 +62,11 @@
 .rodapePrincipal-contatoForm-fieldset {
     display: flex;
 }
+
+.cabecalhoPrincipal-nav {
+    flex-direction: column;
+}
+
+.cabecalhoPrincipal .container {
+    flex-direction: column;
+}
