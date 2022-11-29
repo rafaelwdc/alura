@@ -1,3 +1,5 @@
+/* Cabeçalho */
+
 .cabecalhoPrincipal .container {
     display: flex;
     align-items: center;
@@ -6,5 +8,11 @@
 
 .cabecalhoPrincipal-nav {
     display: flex;
-    
+}
+
+/* Rodapé */
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
 }
