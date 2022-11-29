@@ -69,4 +69,6 @@
 
 .cabecalhoPrincipal .container {
     flex-direction: column;
+    align-items: initial;
+    text-align: center;
 }
