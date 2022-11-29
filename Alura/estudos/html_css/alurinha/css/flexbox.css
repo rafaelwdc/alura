@@ -1,8 +1,8 @@
 /* Cabeçalho */
 
 .cabecalhoPrincipal .container {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -14,5 +14,12 @@
 
 .rodapePrincipal-patrocinadores .container {
     display: flex;
+    justify-content: space-between ;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    align-items: center;
+    display: flex;
     justify-content: space-between;
+    width: 75%;
 }
