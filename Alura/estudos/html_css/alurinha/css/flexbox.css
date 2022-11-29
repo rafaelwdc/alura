@@ -10,6 +10,12 @@
     display: flex;
 }
 
+/* Nossos Cursos */
+
+.conteudoPrincipal-cursos {
+    display: flex;
+}
+
 /* Mapa de Cursos */
 
 .rodapePrincipal-navMap-list {
