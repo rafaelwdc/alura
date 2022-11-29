@@ -19,6 +19,11 @@
 
 .conteudoPrincipal-cursos-link {
     width: 20%;
+    margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    margin-right: 0;
 }
 
 /* Mapa de Cursos */
