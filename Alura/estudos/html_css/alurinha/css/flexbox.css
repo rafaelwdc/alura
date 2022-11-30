@@ -30,13 +30,20 @@
     margin-left: 0;
 }
 
-
 /* Video Sobre */
 
-.videoSobre {
+.videoSobre .container {
     display: flex;
+    justify-content: space-between;
 }
 
+.videoSobre-sobre {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+
+}
 
 /* Mapa de Cursos */
 
