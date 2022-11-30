@@ -35,10 +35,12 @@
 .videoSobre .container {
     display: flex;
     justify-content: space-between;
+    gap: 1em;
 }
 
 .videoSobre-video {
     flex-grow: 1;
+    flex-shrink: 2;
 }
 
 .videoSobre-sobre {
@@ -117,6 +119,16 @@
     
     .rodapePrincipal-navMap-list {
         height: auto;
+    }
+
+    /* Video Sobre */
+
+    .videoSobre .container {
+        flex-direction: column;
+    }
+
+    .videoSobre-video {
+        margin: 0 auto;
     }
     
     /* Rodapé */
