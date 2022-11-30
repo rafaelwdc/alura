@@ -1,7 +1,29 @@
 .destaques {
-    background: #700;
+    background: #ccc;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(3, 33.33%);
     height: calc(100vh - 50px);
+}
+
+.destaques__principal {
+    background-image: url(../img/fortnite.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.destaques__secundario:nth-child(2) {
+    background-image: url(../img/pubg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
