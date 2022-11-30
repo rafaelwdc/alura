@@ -35,3 +35,15 @@
     grid-column: 3 / 3;
     grid-row: 3 / 3;
 }
+
+.destaques__categoria {
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
