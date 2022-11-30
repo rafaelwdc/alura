@@ -3,21 +3,24 @@
     display: grid;  
     font-family: Arial, Helvetica, sans-serif;
     grid-template-areas: 
-        "Cabeçalho",
-        "Conteudo",
-        "Rodapé";
+        "cabecalho",
+        "conteudo",
+        "rodape";
     grid-template-columns: auto;
-    grid-template-rows: 50px auto auto;
+    grid-template-rows: 50px 100vh auto;
 }
 
 .cabecalho {
     background: #0C9;
+    grid-area: "cabecalho";
 }
  
 .conteudo {
     background: #FF8080;
+    grid-area: "conteudo";
 }
 
 .rodape {
     background: #09F;
+    grid-area: "rodape";
 }
