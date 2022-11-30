@@ -37,14 +37,23 @@
     justify-content: space-between;
 }
 
+.videoSobre-video {
+    flex-grow: 1;
+}
+
 .videoSobre-sobre {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 2;
     text-align: center;
+    justify-content: space-between;
 
 }
 
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
+ 
 /* Mapa de Cursos */
 
 .rodapePrincipal-navMap-list {
