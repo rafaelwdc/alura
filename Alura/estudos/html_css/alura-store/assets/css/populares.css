@@ -9,6 +9,14 @@
 
 }
 
+.populares__card___titulo {
+    font-weight: 500;
+}
+
+.populares__icone {
+    margin-right: .25rem;
+}
+
 .populares__card {
     background: #fdfdfd;
     display: grid;
