@@ -1,3 +1,9 @@
+.caixa {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
 .destaques {
     background: #ccc;
     display: grid;
