@@ -6,6 +6,14 @@
     height: calc(100vh - 50px);
 }
 
+.destaques__titulo {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fdfdfd;
+    padding: .6rem;
+    text-align: center;
+    width: 100%;
+}
+
 .destaques__principal {
     background: url(../img/fortnite.jpg) center / cover no-repeat;
     grid-column: 1 / 4;
