@@ -2,11 +2,8 @@
     padding: 3rem 0;
 }
 
-.populares__conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    grid-area: conteudo;
-
+.populares__cabecalho {
+    border-bottom: 1px solid #dcdcdc;
 }
 
 .populares__card___titulo {
@@ -15,6 +12,13 @@
 
 .populares__icone {
     margin-right: .25rem;
+}
+
+.populares__conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: conteudo;
+
 }
 
 .populares__card {
