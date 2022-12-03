@@ -2,10 +2,13 @@
     <script>
         var alvo = '11a22b33c';
         var exp = /(\d\d)(\w)/g;
-        var resultado = null;
-        while (resultado = exp.exec(alvo)) {
-            console.log(resultado);
+        console.log(exp.test(alvo));
+
+
+        // var resultado = null;
+        // while (resultado = exp.exec(alvo)) {
+            // console.log(resultado);
             console.log(exp.lastIndex);
-        }
+        // }
     </script>
 </html>
