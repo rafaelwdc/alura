@@ -1,11 +1,20 @@
 function verificaSeOChuteTemOValorValido(chute) {
-    const numero =+ chute;
+    const numero = +chute;
     if(chuteForInvalido(numero)) {
-        console.log('Valor inválido');
+        elementoChute.innerHTML += `<div>Valor inválido</div>`;
     };
     if (numeroForMaiorouMenorQueOValorPermitido(numero)) {
-        console.log(`Valor inválido: o número secreto precisa estar entre ${menor-valor} e ${maior-valor}`);
+        elementoChute.innerHTML += `
+            <div>Valor inválido: fale um número entre ${menorValor} e ${maiorValor}</div>
+        `;
     };
+
+    if(numero === numeroSecreto) {
+        document.body.innerHTML = `
+            <h2>Você acertou!</h2>
+            <h3>Seu numero secreto era: ${numeroSecreto}</h3>
+        `;
+    }
 };
 
 function chuteForInvalido(numero) {
@@ -13,5 +22,5 @@ function chuteForInvalido(numero) {
 };
 
 function numeroForMaiorouMenorQueOValorPermitido(numero) {
-    return numero > maiorValor || numero < numeroForMaiorouMenorQueOValorPermitido;
+    return numero > maiorValor || numero < menorValor;
 };
