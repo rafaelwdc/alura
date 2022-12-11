@@ -69,6 +69,20 @@
       "url": "https://www.youtube.com/embed/hMJL3AaTVd8",
       "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
       "id": 10
+    },
+    {
+      "titulo": "Conhecendo o Next.js",
+      "descricao": "8 mil visualizações",
+      "url": "https://www.youtube.com/embed/YHpG6t91oW8",
+      "imagem": "https://purr.objects-us-east-1.dream.oi/1/OoNx6.jpg",
+      "id": 11
+    },
+    {
+      "titulo": "Conhecendo o Next.js",
+      "descricao": "6 mil visualizações",
+      "url": "https://www.youtube.com/embed/YHpG6t91oW8",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
+      "id": 12
     }
   ]
 }
