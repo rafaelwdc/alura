@@ -16,7 +16,6 @@ async function criarVideo(evento) {
     } catch (e) {
         alert(e);
     };
-
 };
 
 formulario.addEventListener('submit', evento => criarVideo(evento));
