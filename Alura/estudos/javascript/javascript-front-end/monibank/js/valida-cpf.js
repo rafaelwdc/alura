@@ -25,6 +25,7 @@ function validaNumerosRepetidos(cpf) {
 function validaPrimeiroDigito(cpf) {
     let soma = 0;
     let multiplicador = 10;
+
     for(let tamanho = 0; tamanho < 9; tamanho++) {
         soma += cpf[tamanho] * multiplicador;
         multiplicador--;
@@ -42,6 +43,7 @@ function validaPrimeiroDigito(cpf) {
 function validaSegundoDigito(cpf) {
     let soma = 0;
     let multiplicador = 11;
+    
     for(let tamanho = 0; tamanho < 10; tamanho++) {
         soma += cpf[tamanho] * multiplicador;
         multiplicador--;

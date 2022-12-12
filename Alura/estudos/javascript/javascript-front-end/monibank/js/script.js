@@ -1,6 +1,23 @@
 import ehUmCPF from "./valida-cpf.js";
 import ehMaiorDeIdade from "./valida-idade.js";
 const camposDoFormulario = document.querySelectorAll("[required]");
+const formulario = document.querySelector("[data-formulario]");
+
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const listaRespostas = {
+        "nome": e.target.element["nome"].value,
+        "email": e.target.element["email"].value,
+        "rg": e.target.element["rg"].value,
+        "cpf": e.target.element["cpf"].value,
+        "aniversario": e.target.element["aniversario"].value,
+    };
+
+    localStorage.setItem("cadastro", JSON.stringify(listaRespostas));
+
+    window.location.href = './abrir-conta-form-2.html';
+});
 
 camposDoFormulario.forEach((campo) => {
     campo.addEventListener('blur', () => verificaCampo(campo))
@@ -44,7 +61,7 @@ const mensagens = {
     termos: {
         valueMissing: 'Você deve aceitar nossos termos antes de continuar.',
     }
-}
+};
 
 function verificaCampo(campo) {
     let mensagem = "";
