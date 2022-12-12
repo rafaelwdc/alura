@@ -1,8 +1,1 @@
-function suportaTransform() {
-	var el = document.createElement('div');
-	return el.style['transform'] !== undefined || el.style['WebkitTransform'] !== undefined;
-}
-
-if (!suportaTransform()) {
-	document.documentElement.className += ' no-transform';
-}
+function suportaTransform(){var r=document.createElement("div");return void 0!==r.style.transform||void 0!==r.style.WebkitTransform}suportaTransform()||(document.documentElement.className+=" no-transform");

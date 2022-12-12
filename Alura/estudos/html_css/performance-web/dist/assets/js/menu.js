@@ -1,12 +1,1 @@
-$(window).on('load', function() {
-	var menu = $('.header-menu');
-
-	$('.header-menu-titulo').on('click', function() {
-		if (menu.is('[data-ativo]')) {
-			menu.removeAttr('data-ativo');
-		} else {
-			menu.attr('data-ativo', '');
-		}
-	});
-
-});
+window.addEventListener("load",function(){var t=document.querySelector(".header-menu-titulo"),e=document.querySelector(".header-menu");t&&(t.onclick=function(){e.hasAttribute("data-ativo")?e.removeAttribute("data-ativo"):e.setAttribute("data-ativo","")})});
