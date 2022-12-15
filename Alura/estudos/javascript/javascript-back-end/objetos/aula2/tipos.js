@@ -5,4 +5,4 @@ const cliente = {
     telefone: ["11 555 555 550","11 444 444 440"],
 };
 
-console.log(cliente);
+console.log(cliente.telefone);
