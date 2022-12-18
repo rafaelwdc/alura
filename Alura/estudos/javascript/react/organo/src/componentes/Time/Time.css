@@ -1,0 +1,12 @@
+.time {
+    background-color: #d9f7e9;
+    text-align: center;
+    padding: 32px;
+}
+
+.time h3 {
+    border-bottom: 4px solid #57c278;
+    display: inline-block;
+    font-size: 32px;
+    padding-bottom: 8px;
+}
