@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Rodape from './componentes/Rodape';
@@ -46,10 +46,10 @@ function App () {
 
   const [colaboradores, setColaboradores] = useState([])
 
-  const aoNovoColaboradorAdicionado = useCallback((colaborador) => {
-    console.log(colaborador)
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    debugger
     setColaboradores([...colaboradores, colaborador])
-  }, [colaboradores, setColaboradores]);
+  };
 
   return (
     <div className="App">
