@@ -9,7 +9,7 @@ export default function Galeria() {
     <section className={styles.galeria}>
       <h2>Navegue pela galeria</h2>
       <Tags />
-      <Cards itens={fotos} styles={styles} />
+      <Cards itens={fotos} style={styles} />
     </section>
   )
 }
