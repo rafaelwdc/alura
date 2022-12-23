@@ -1,3 +1,5 @@
+@import-normalize;
+
 body {
     background-image: linear-gradient(#041833, #154580);
     box-sizing: border-box;
@@ -9,10 +11,27 @@ body {
 body::-webkit-scrollbar {
     width: 3px;
 }
+
 body::-webkit-scrollbar-track {
     background: linear-gradient(#041833, #154580);
 }
+
 body::-webkit-slider-thumb {
     background-color: #154580;
     border-radius: 20px;
+}
+
+@font-face {
+    font-family: "GandhiSansRegular";
+    src: local("GandhiSansRegular"),
+        url("../assets/fontes/GandhiSans-Regular.otf") format("truetype");
+    font-weight: 500;
+    display: swap;
+}
+@font-face {
+    font-family: "GandhiSansBold";
+    src: local("GandhiSansBold"),
+        url("../assets/fontes/GandhiSans-Bold.otf") format("truetype");
+    font-weight: 500;
+    display: swap;
 }
