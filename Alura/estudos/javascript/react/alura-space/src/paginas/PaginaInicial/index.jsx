@@ -4,20 +4,22 @@ import Banner from "../../componentes/Banner"
 import styles from './PaginaInicial.module.scss';
 import Rodape from "../../componentes/Rodape";
 import Galeria from "../../componentes/Galeria";
+import Populares from "../../componentes/Populares";
 
-export default function PaginaInicial () {
+export default function PaginaInicial() {
     return (
         <>
             <Cabecalho />
             <main>
-                <div className={styles.principal}>
+                <section className={styles.principal}>
                     <Menu />
                     <Banner />
+                </section>
+                <div className={styles.galeria}>
+                    <Galeria />
+                    <Populares />
                 </div>
             </main>
-            <div>
-                <Galeria />
-            </div>
             <Rodape />
         </>
     )
