@@ -27,12 +27,12 @@ body::-webkit-slider-thumb {
     src: local($fonte-normal),
         url("../assets/fontes/GandhiSans-Regular.otf") format("truetype");
     font-weight: 500;
-    display: swap;
+    font-display: swap;
 }
 @font-face {
     font-family: $fonte-bold;
     src: local($fonte-bold),
         url("../assets/fontes/GandhiSans-Bold.otf") format("truetype");
     font-weight: 500;
-    display: swap;
+    font-display: swap;
 }
