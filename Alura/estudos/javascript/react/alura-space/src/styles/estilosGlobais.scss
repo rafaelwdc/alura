@@ -1,7 +1,8 @@
 @import-normalize;
+@import "./variaveis";
 
 body {
-    background-image: linear-gradient(#041833, #154580);
+    background-image: linear-gradient($azul-escuro, $azul-claro);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,24 +14,24 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: linear-gradient(#041833, #154580);
+    background: linear-gradient($azul-escuro, $azul-claro);
 }
 
 body::-webkit-slider-thumb {
-    background-color: #154580;
+    background-color: $azul-claro;
     border-radius: 20px;
 }
 
 @font-face {
-    font-family: "GandhiSansRegular";
-    src: local("GandhiSansRegular"),
+    font-family: $fonte-normal;
+    src: local($fonte-normal),
         url("../assets/fontes/GandhiSans-Regular.otf") format("truetype");
     font-weight: 500;
     display: swap;
 }
 @font-face {
-    font-family: "GandhiSansBold";
-    src: local("GandhiSansBold"),
+    font-family: $fonte-bold;
+    src: local($fonte-bold),
         url("../assets/fontes/GandhiSans-Bold.otf") format("truetype");
     font-weight: 500;
     display: swap;
