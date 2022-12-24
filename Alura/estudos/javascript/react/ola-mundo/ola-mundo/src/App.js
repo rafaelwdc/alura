@@ -1,5 +1,13 @@
+import { BrowserRouter } from "react-router-dom"
+import Inicio from "./paginas/inicio";
+import SobreMim from "./paginas/sobreMim";
+
 function App() {
-  return <h1>Olá, mundo!</h1>
+  return (
+    <BrowserRouter>
+      
+    </BrowserRouter>
+  )
 }
 
 export default App;
