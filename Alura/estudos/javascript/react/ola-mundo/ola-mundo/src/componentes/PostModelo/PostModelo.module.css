@@ -27,6 +27,8 @@
  
 .postConteudoContainer {
     padding: 2.5rem 7.5rem 4.5rem;
+    width: 85vw;
+    margin: 0 auto;
 }
  
 @media (max-width: 744px) {

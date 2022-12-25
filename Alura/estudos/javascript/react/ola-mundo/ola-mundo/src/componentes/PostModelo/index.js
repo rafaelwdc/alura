@@ -13,7 +13,7 @@ export default function PostModelo({ children, fotoCapa, titulo }) {
             {titulo}
         </h2>
 
-        <div className={styles.postModeloContainer}>
+        <div className={styles.postConteudoContainer}>
             {children}
         </div>
     </article>
