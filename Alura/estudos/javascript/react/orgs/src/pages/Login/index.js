@@ -10,9 +10,12 @@ import {
   InputAdornment
 } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
+import { UsuarioContext } from 'common/context/Usuario';
+import { useContext } from "react";
 
-function Login({ nome, setNome, saldo, setSaldo }) {
+function Login() {
   const history = useHistory();
+  const { nome, setNome, saldo, setSaldo } = useContext(UsuarioContext);
   return (
     <Container>
       <Titulo>
@@ -46,7 +49,7 @@ function Login({ nome, setNome, saldo, setSaldo }) {
       <Button
         variant="contained"
         color="primary"
-        onClick={()=> history.push('/feira')}
+        onClick={() => history.push('/feira')}
       >
         Avançar
       </Button>
