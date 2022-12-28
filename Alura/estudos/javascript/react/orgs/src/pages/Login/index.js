@@ -36,9 +36,9 @@ function Login() {
           Saldo
         </InputLabel>
         <Input
+          type="number"
           value={saldo}
           onChange={(event) => setSaldo(event.target.value)}
-          type="number"
           startAdornment={
             <InputAdornment position="start">
               R$
@@ -49,6 +49,7 @@ function Login() {
       <Button
         variant="contained"
         color="primary"
+        disable={nome.legth < 3}
         onClick={() => history.push('/feira')}
       >
         Avançar
