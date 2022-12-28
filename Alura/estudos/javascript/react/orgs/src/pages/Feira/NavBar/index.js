@@ -17,6 +17,7 @@ export default function NavBar() {
         onClick={() => history.push('/carrinho')}
       >
         <Badge
+          overlap="rectangular"
           color="primary"
           badgeContent={ quantidadeProdutos }
         >
