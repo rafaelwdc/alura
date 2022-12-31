@@ -1,5 +1,9 @@
 import './CampoTexto.css'
 
+interface CampoTextoProps {
+    
+}
+
 const CampoTexto = (props) => {
 
     const placeholderModificada = `${props.placeholder}...` 
