@@ -25,7 +25,7 @@ const CampoTexto = ({ aoAlterado, label, obrigatorio, placeholder, valor }: Camp
             </label>
             <input 
                 value={valor} 
-                onChange={ evento => aoDigitado} 
+                onChange={aoDigitado} 
                 required={obrigatorio} 
                 placeholder={placeholderModificada}
             />
