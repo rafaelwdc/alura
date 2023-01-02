@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { IColaborador } from './compartilhado/interface/IColaborador';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
@@ -45,9 +46,9 @@ function App() {
 
   const [colaboradores, setColaboradores] = useState([])
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
+  const aoNovoColaboradorAdicionado = (colaborador: IColaborador) => {
     debugger
-    setColaboradores([...colaboradores, colaborador])
+    // setColaboradores([...colaboradores, colaborador])
   }
 
   return (
