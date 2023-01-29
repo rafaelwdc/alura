@@ -3,11 +3,34 @@
     padding: 0;
 }
 
+.apresentacao {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10%;
+}
+
+.apresentacao__conteudo {
+    width: 615px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+}
+
 body {
     background-color: #000000;
     box-sizing: border-box;
     color: #F6F6F6;
     height: 100vh;
+}
+
+.imagem {
+    border-radius: 2em;
 }
 
 .titulo-destaque {
