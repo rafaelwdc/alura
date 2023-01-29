@@ -19,7 +19,12 @@
 .apresentacao__conteudo__titulo {
     font-size: 36px;
     font-family: 'Krona One', sans-serif;
+}
 
+.apresentacao__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .apresentacao__conteudo__texto {
@@ -41,3 +46,4 @@ body {
 .titulo-destaque {
     color: #22D4FD;
 }
+
