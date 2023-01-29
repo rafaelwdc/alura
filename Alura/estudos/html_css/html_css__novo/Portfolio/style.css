@@ -30,8 +30,11 @@
 }
 
 .apresentacao__links {
+    align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    gap: 32px;
     justify-content: space-between;
 }
 
