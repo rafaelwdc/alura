@@ -1,11 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
     background-color: #000000;
+    box-sizing: border-box;
     color: #F6F6F6;
+    height: 100vh;
 }
 
 .titulo-destaque {
