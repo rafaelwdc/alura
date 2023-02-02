@@ -19,6 +19,7 @@
 .apresentacao {
     align-items: center;
     display: flex;
+    gap: 82px;
     justify-content: space-between;
     padding: 8% 20%;
 }
@@ -132,4 +133,14 @@ body {
     font-weight: 400;
     text-align: center;
     padding: 24px;
+}
+
+@media (max-width: 1400px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao__imagem {
+
+    }
 }
