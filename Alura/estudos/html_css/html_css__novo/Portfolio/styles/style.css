@@ -140,7 +140,11 @@ body {
         flex-direction: column-reverse;
     }
 
-    .apresentacao__imagem {
+    .cabecalho {
+        padding: 10%;
+    }
 
+    .cabecalho__menu {
+        justify-content: center;
     }
 }
